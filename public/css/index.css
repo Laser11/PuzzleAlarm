@@ -1,0 +1,37 @@
+.bigButton {
+  width: 100%;
+  min-width: 200px;
+  height: 15vw;
+  max-height: 20%;
+  background-color: rgb(100,100,100);
+}
+
+#cancel {
+  bottom: 0px;
+}
+
+#alarmsBox {
+
+}
+
+.alarm {
+  width: 100%;
+  min-width: 200px;
+  height: 15vw;
+  max-height: 20%;
+  background-color: rgb(140,140,140);
+}
+
+.timeText {
+  text-align: center;
+  padding: 1% 0;
+  font-size: 5vw;
+  letter-spacing: 1vw;
+  color: rgb(255,255,255);
+
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+}

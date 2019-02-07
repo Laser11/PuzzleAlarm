@@ -1,8 +1,22 @@
 <html>
 <head>
 	<title>Test Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale:1.0">
+	<link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-Begin here (or replace this with any static code already written).
+	<div class="container">
+		<a href="create"><div class="bigButton" id="add"><p class="timeText">Add Alarm</p></div></a>
+		<div id="alarmsBox">
+			{{#each alarms}}
+			<a href="create?id={{id}}&time={{time}}" class="editLink">
+			<div class="alarm" id="{{id}}">
+				
+					<p class="timeText">{{time}}</p>
+				
+			</div></a>
+			{{/each}}			
+		</div>
+	</div>
 </body>
 </html>
