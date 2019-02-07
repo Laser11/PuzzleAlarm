@@ -41,19 +41,19 @@
 
 .on {
   background-color: rgb(30,30,30);
-  width:15%;
+  width:20%;
   height:20%;
   float: left;
 }
 
 .off {
   background-color: rgb(40,40,40);
-  width:15%;
+  width:20%;
   height:20%;
   float: left;
 }
 .alarm {
-  width: 69%;
+  width: 59%;
   height: 20%;
   float: left;
   background-color: rgb(140,140,140);
