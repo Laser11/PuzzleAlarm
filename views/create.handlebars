@@ -5,12 +5,22 @@
 	<link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-	<form action="/" >
-		<a href="/"><div class="bigButton" id="Save"><p class="timeText">Save and Exit</p></div></a>
-		<p>Name: <input type="text" name="clkname" value={{oldName}}></p>
-		<p>Time: <input type="time" name="clktime" value={{oldTime}}></p>
-		<p>Ongoing? <input type="radio" name="ongoing" value="true" checked>Yes <input type="radio" name="ongoing" value="false" {{singleUse}}>No
-		<p>End date: Select</p><input type="date" name=enddate value="{{oldDate}}">
+	<form action="/add">
+		<input type="submit" id="sne" value="Submit & Exit">
+		<br>Name: <input type="text" name="clkname" value={{name}}>
+		<br>Time: <input type="time" name="clktime" value={{time}}>
+		<br>Ongoing? <input type="radio" name="ongoing" value="true" checked>Yes <input type="radio" name="ongoing" value="false" {{singleUse}}>No
+
+		<br><input type="checkbox" name="dayChoice" value="mon" {{monCheck}}>Mon
+		<input type="checkbox" name="dayChoice" value="tue" {{tuesCheck}}>Tue
+		<input type="checkbox" name="dayChoice" value="wed" {{wedCheck}}>Wed
+		<input type="checkbox" name="dayChoice" value="thu" {{thursCheck}}>Thu
+		<input type="checkbox" name="dayChoice" value="fri" {{friCheck}}>Fri
+		<input type="checkbox" name="dayChoice" value="sat" {{satCheck}}>Sat
+		<input type="checkbox" name="dayChoice" value="sun" {{sunCheck}}>Sun
+
+		<br>
+		<p>End date: <input type="date" name=enddate value="{{date}}"> </p>
 		<p>Unlock method:
 			<br><input type="checkbox" name="puzzleChoice" value="trivia" {{triviaCheck}}>Trivia
 			<br><input type="checkbox" name="puzzleChoice" value="math" {{mathCheck}}>Math

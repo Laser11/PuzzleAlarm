@@ -3,20 +3,27 @@
 	<title>Test Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale:1.0">
 	<link rel="stylesheet" href="/css/index.css">
+
 </head>
 <body>
 	<div class="container">
-		<a href="create"><div class="bigButton" id="add"><p class="timeText">Add Alarm</p></div></a>
+		<a href="create"><div class="bigButton" id="add"><p class="buttonText">Add Alarm</p></div></a>
 		<div id="alarmsBox">
 			{{#each alarms}}
-			<a href="create?id={{id}}&time={{time}}" class="editLink">
-			<div class="alarm" id="{{id}}">
-				
-					<p class="timeText">{{time}}</p>
-				
-			</div></a>
+			<div style="margin: 2px 0px;float:left;">
+				<a href="create?name={{name}}" class="editLink">
+				<div class="alarm" id="{{name}}">
+					
+						<p class="timeText">{{time}}</p>
+					
+				</div></a>
+				<a href="#" class="on"><div><p class="timeText">ON</p></div></a>
+				<a href="#" class="off"><div><p class="timeText">OFF</p></div></a>
+			</div>
 			{{/each}}			
 		</div>
+		<a href="/options"><div class="bigButton" id="Options"><p class="buttonText">Options</p></div></a>
+		<div><a href="/help"><div class="bigButton" id="Help"><p class="buttonText">Help</p></div></a></
 	</div>
 </body>
 </html>
