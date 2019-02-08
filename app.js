@@ -11,6 +11,7 @@ var handlebars = require('express3-handlebars')
 var index = require('./routes/index');
 var create = require('./routes/create')
 var add = require('./routes/add')
+var help = require('./routes/help')
 // Example route
 // var user = require('./routes/user');
 
@@ -39,6 +40,7 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/create', create.view)
 app.get('/add', add.addClock)
+app.get('/help',help.view)
 // Example route
 // app.get('/users', user.list);
 

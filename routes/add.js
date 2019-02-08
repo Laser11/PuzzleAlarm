@@ -4,9 +4,10 @@ exports.addClock = function(request, response) { 
 	var newdata = {name : request.query.clkname,
 		time: request.query.clktime,
 		//singleuse : request.query.ongoing == "true" ? "":"checked",
-		date : request.query.date
+		date : request.query.date,
 		//triviaCheck : request.query.puzzleChoice == "trivia" ? "checked":"",
 		//mathCheck : request.query.puzzleChoice == "math" ? "checked":""
+		online : "ON"
 	}
 	
 	

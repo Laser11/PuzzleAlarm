@@ -29,9 +29,10 @@
 }
 
 #alarmsBox {
-  height: 50%;
+  height: 70%;
   overflow-y: scroll;
   overflow-x: hidden;
+
 }
 
 .bigButton {
@@ -39,9 +40,9 @@
   background-color: rgb(100,100,100);
 }
 
-.on {
+.on, .editLink {
   background-color: rgb(30,30,30);
-  width:25%;
+  width:30%;
   height:20%;
   float: left;
 }
@@ -53,7 +54,7 @@
   float: left;
 }
 .alarm {
-  width: 49%;
+  width: 69%;
   height: 20%;
   float: left;
   background-color: rgb(140,140,140);
@@ -61,7 +62,7 @@
 
 .buttonText {
   text-align: center;
-  padding: 2% 0;
+  padding: 0 0;
   font-size: 150%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
@@ -69,14 +70,37 @@
   font-family: sans-serif;
 }
 
+.nameText {
+  float: left;
+  width:50%;
+  
+  font-size: 100%;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+
+  font-family: sans-serif;
+}
+
 .timeText {
-  text-align: center;
-  padding: 0 0;
+  width: 50%;  
+  float: right;
+  
   font-size: 150%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
 
   font-family: sans-serif;
+}
+
+.dateText {
+  float:left;
+  width:100%;
+  
+  font-size: 100%;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+
+  font-family: sans-serif; 
 }
 
 a {
@@ -89,4 +113,13 @@ div {
 
 body {
   background-color: rgb(200,200,200);
+}
+
+form {
+  font-size: 150%;
+  line-height: 200%;
+  letter-spacing: 2px;
+  color: rgb(5,5,5);
+
+  font-family: sans-serif; 
 }
