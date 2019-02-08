@@ -7,8 +7,8 @@
     "online" : "ON",
     "triviaCheck" : "checked",
     "mathCheck" : "checked",
-    "singleUse" : "checked"
-
+    "singleUse" : "checked",
+    "week" : "M W F"
     },
     {
     "name" : "Google Meet",
@@ -17,7 +17,8 @@
     "triviaCheck" : "checked",
     "mathCheck" : "checked",
     "singleUse" : "checked",
-    "online" : "ON"
+    "online" : "ON",
+    "week" : "M W F"
     },
     {
     "name" : "Morning Alarm",
@@ -26,7 +27,8 @@
     "online" : "ON",
     "triviaCheck" : "checked",
     "mathCheck" : "checked",
-    "singleUse" : "checked"
+    "singleUse" : "checked",
+    "week" : "Sat Sun"
 
     },
     {
@@ -36,7 +38,8 @@
     "online" : "ON",
     "triviaCheck" : "checked",
     "mathCheck" : "checked",
-    "singleUse" : "checked"
+    "singleUse" : "checked",
+    "week" : "Tu Th"
 
     },
     {
@@ -46,7 +49,8 @@
     "online" : "ON",
     "triviaCheck" : "checked",
     "mathCheck" : "checked",
-    "singleUse" : "checked"
+    "singleUse" : "checked",
+    "week" : "F"
     }
   ]
 }

@@ -1,6 +1,6 @@
 
 
-#sne {
+.sne {
   height: 10%;
   background-color: rgb(100,100,100);
   width: 100%;
@@ -29,11 +29,12 @@
 }
 
 #alarmsBox {
-  height: 70%;
+  height: 85%;
   overflow-y: scroll;
   overflow-x: hidden;
 
 }
+
 
 .bigButton {
   height: 10%;
@@ -45,6 +46,11 @@
   width:30%;
   height:20%;
   float: left;
+}
+
+.indentBlock {
+  margin-left: 4%;
+  width:auto;
 }
 
 .off {
@@ -71,9 +77,10 @@
 }
 
 .nameText {
+  text-align: center;
   float: left;
-  width:50%;
-  
+  width:100%;
+  height:30%;
   font-size: 100%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
@@ -83,8 +90,8 @@
 
 .timeText {
   width: 50%;  
-  float: right;
-  
+  float: left;
+  height:70%;
   font-size: 150%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
@@ -93,9 +100,9 @@
 }
 
 .dateText {
-  float:left;
-  width:100%;
-  
+  float:right;
+  width:50%;
+  height:70%;
   font-size: 100%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
