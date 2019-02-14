@@ -59,7 +59,7 @@
   float: left;
 }
 .alarm {
-  width: 69%;
+  width: 100%;
   height: 20%;
   float: left;
   background-color: rgb(140,140,140);
@@ -111,6 +111,7 @@
 }
 
 .timeText {
+<<<<<<< HEAD
   margin-left: 15px;
   margin-bottom: 10px;
   vertical-align: middle;
@@ -133,6 +134,15 @@
   height:70%;
   font-size: 125%;
   letter-spacing: 3px;
+=======
+  width: 40%;
+  padding-left: 10%; 
+  float: left;
+  height:70%;
+  left:10%;
+  font-size: 200%;
+  letter-spacing: 5px;
+>>>>>>> a57175d0c464d962eca0910fdc274c1693782e46
   color: rgb(255,255,255);
 
   font-family: sans-serif;

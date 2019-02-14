@@ -1,9 +1,8 @@
 <html>
 <head>
-	<title>Test Page</title>
+	<title>Alarm Clock</title>
 	<meta name="viewport" content="width=device-width, initial-scale:1.0">
 	<link rel="stylesheet" href="/css/index.css">
-
 </head>
 <body>
 	<div class="container">
@@ -11,9 +10,10 @@
 		<div id="alarmsBox">
 			{{#each alarms}}
 			<div style="margin: 2px 0px;float:left;">
-				<!--a href="" class="editLink"-->
+				<a href="create?name={{name}}">
 				<div class="alarm" id="{{name}}">
 						<div class="nameText">{{name}}</div>
+<<<<<<< HEAD
 						<div class="timeText">{{time}}</div>
 						<div class="daysText">{{week}}</div>
 					
@@ -22,6 +22,15 @@
 				<a href="create?name={{name}}" class="editLink">
 					<div class="editButtonText">EDIT</div>
 				</a>
+=======
+						<div class="timeText">{{time}}</span></div>
+						
+						<div class="timeText">{{week.text}}</div>
+						
+				</div></a>
+				<!--a href="#" class="on"><div><p class="timeText">ON</p></div></a-->
+				<!--a href="create?name={{name}}" class="editLink"><div><p class="buttonText">EDIT</p></div></a-->
+>>>>>>> a57175d0c464d962eca0910fdc274c1693782e46
 			</div>
 			{{/each}}			
 		</div>

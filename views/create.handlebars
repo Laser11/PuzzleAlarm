@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>Test Page</title>
+	<title>Create Alarm</title>
 	<meta name="viewport" content="width=device-width, initial-scale:1.0">
 	<link rel="stylesheet" href="/css/index.css">
 	<script type="text/javascript">
@@ -12,34 +12,34 @@
 <body>
 	<form action="/add">
 		<input type="submit" class="sne" value="Save & Exit">
-		<input type="radio" name="on" value="true" checked>On <input type="radio" name="on" value="false">Off
+		
 		<br>Name: <input type="text" name="clkname" value={{name}}>
-		<br>Time: <input type="time" name="clktime" value={{time}}>
-		<br>Ongoing? <input type="radio" name="ongoing" value="true" checked>Yes <input type="radio" name="ongoing" value="false" {{singleUse}}>No
+		<br>Time: <input type="time" name="clktime" value="{{rawTime}}">
+		<br>Ongoing? <input type="radio" name="ongoing" value="" checked>Yes <input type="radio" name="ongoing" value="checked" {{singleUse}}>No
 
 		<div class="indentBlock">
-			<input type="checkbox" name="dayChoice" value="mon" {{monCheck}}>Mon
-			<input type="checkbox" name="dayChoice" value="tue" {{tuesCheck}}>Tue
-			<input type="checkbox" name="dayChoice" value="wed" {{wedCheck}}>Wed
-			<input type="checkbox" name="dayChoice" value="thu" {{thursCheck}}>Thu
-			<input type="checkbox" name="dayChoice" value="fri" {{friCheck}}>Fri
-			<input type="checkbox" name="dayChoice" value="sat" {{satCheck}}>Sat
-			<input type="checkbox" name="dayChoice" value="sun" {{sunCheck}}>Sun
+			<input type="checkbox" name="monChoice" value="checked" {{week.monCheck}}>Mon
+			<input type="checkbox" name="tueChoice" value="checked" {{week.tuesCheck}}>Tue
+			<input type="checkbox" name="wedChoice" value="checked" {{week.wedCheck}}>Wed
+			<input type="checkbox" name="thuChoice" value="checked" {{week.thursCheck}}>Thu
+			<input type="checkbox" name="friChoice" value="checked" {{week.friCheck}}>Fri
+			<input type="checkbox" name="satChoice" value="checked" {{week.satCheck}}>Sat
+			<input type="checkbox" name="sunChoice" value="checked" {{week.sunCheck}}>Sun
 		</div>
 		
 		<!--p>End date: <input type="date" name=enddate value="{{date}}"></p-->
 		Unlock method:
 			<div class="indentBlock">
-				<input type="checkbox" name="puzzleChoice" value="trivia" {{triviaCheck}}>Music
-			<br><input type="checkbox" name="puzzleChoice" value="math" {{mathCheck}}>Math
-			<br><input type="checkbox" name="puzzleChoice" value="memory" {{memoryCheck}}>Memory
+				<input type="checkbox" name="trivChoice" value="checked" {{puzzles.triviaCheck}}>Music
+			<br><input type="checkbox" name="mathChoice" value="checked" {{puzzles.mathCheck}}>Math
+			<br><input type="checkbox" name="memChoice" value="checked" {{puzzles.memoryCheck}}>Memory
 			</div>
 		
 		Difficulty
 		<div class="indentBlock">
-			<input type="checkbox" name="difficulty" value="easy">Easy
-		<br><input type="checkbox" name="difficulty" value="med">Medium 
-		<br><input type="checkbox" name="difficulty" value="hard">Hard
+			<input type="checkbox" name="easeDiff" value="checked" {{difficulty.easyCheck}}>Easy
+		<br><input type="checkbox" name="hardDiff" value="checked" {{difficulty.medCheck}}>Medium 
+		<br><input type="checkbox" name="medDiff" value="checked" {{difficulty.hardCheck}}>Hard
 		</div>
 		<input class="sne" type="button" value="Cancel" onclick="deleteClock()">
 	</form>
