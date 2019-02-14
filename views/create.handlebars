@@ -11,7 +11,7 @@
 </head>
 <body>
 	<form action="/add">
-		<input type="submit" class="sne" value="Save & Exit">
+		<input class="sne" type="button" value="Cancel" onclick="deleteClock()">
 		
 		<br>Name: <input type="text" name="clkname" value={{name}}>
 		<br>Time: <input type="time" name="clktime" value="{{rawTime}}">
@@ -41,7 +41,8 @@
 		<br><input type="checkbox" name="hardDiff" value="checked" {{difficulty.medCheck}}>Medium 
 		<br><input type="checkbox" name="medDiff" value="checked" {{difficulty.hardCheck}}>Hard
 		</div>
-		<input class="sne" type="button" value="Cancel" onclick="deleteClock()">
+		
+		<input type="submit" class="sne" value="Save & Exit">
 	</form>
 </body>
 </html>

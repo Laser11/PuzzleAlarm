@@ -1,16 +1,8 @@
+#alarmsBox {
+  height: 75%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 
-
-.sne {
-  height: 10%;
-  background-color: rgb(100,100,100);
-  width: 100%;
-
-  text-align: center;
-  padding: 1% 0;
-  font-size: 30px;
-  letter-spacing: 5px;
-  color: rgb(255,255,255);
-  font-family: sans-serif;
 }
 
 #cancel {
@@ -28,16 +20,65 @@
   bottom: 15vw;
 }
 
-#alarmsBox {
-  height: 85%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-
+#questionBox {
+  height:100%;
+  background-color: rgb(80,80,80);
 }
 
+<<<<<<< HEAD
+=======
+.alarm {
+  width: 100%;
+  height: 20%;
+  float: left;
+  background-color: rgb(140,140,140);
+}
+
+>>>>>>> c6ebb27058299432673d4a0a9e15221b7568231c
 .bigButton {
   height: 10%;
   background-color: rgb(100,100,100);
+}
+
+.buttonText {
+  text-align: center;
+  padding: 0 0;
+  font-size: 150%;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+
+  font-family: sans-serif;
+}
+
+.choice {
+  float:left;
+  background-color: rgb(100,100,100);
+  height:10%;
+  width:40%;
+  margin:4%;
+}
+
+.count {
+  float:left;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+}
+
+.dateText {
+  float:right;
+  width:50%;
+  height:70%;
+  font-size: 100%;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+
+  font-family: sans-serif; 
+}
+
+.indentBlock {
+  margin-left: 4%;
+  width:auto;
 }
 
 .on, .editLink {
@@ -47,10 +88,6 @@
   float: left;
 }
 
-.indentBlock {
-  margin-left: 4%;
-  width:auto;
-}
 
 .off {
   background-color: rgb(40,40,40);
@@ -58,6 +95,7 @@
   height:20%;
   float: left;
 }
+<<<<<<< HEAD
 .alarm {
   width: 100%;
   height: 20%;
@@ -85,6 +123,8 @@
 
   font-family: sans-serif;
 }
+=======
+>>>>>>> c6ebb27058299432673d4a0a9e15221b7568231c
 
 .editButtonText {
   text-align: center;
@@ -107,6 +147,19 @@
   color: rgb(255,255,255);
 
   overflow: hidden;
+  font-family: sans-serif;
+}
+
+.sne {
+  height: 10%;
+  background-color: rgb(100,100,100);
+  width: 100%;
+
+  text-align: center;
+  padding: 1% 0;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
   font-family: sans-serif;
 }
 
@@ -148,16 +201,7 @@
   font-family: sans-serif;
 }
 
-.dateText {
-  float:right;
-  width:50%;
-  height:70%;
-  font-size: 100%;
-  letter-spacing: 5px;
-  color: rgb(255,255,255);
 
-  font-family: sans-serif; 
-}
 
 a {
   text-decoration: none;

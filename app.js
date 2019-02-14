@@ -39,10 +39,13 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
-app.get('/create', create.view)
-app.get('/add', add.addClock)
-app.get('/help',help.view)
-app.get('/puzzle', puzzle.view)
+app.get('/create', create.view);
+app.get('/add', add.addClock);
+app.get('/help',help.view);
+app.get('/puzzle', puzzle.viewA);
+app.get('/puzzle/answer', puzzle.viewB);
+app.get('/puzzle/practice',puzzle.view);
+
 // Example route
 // app.get('/users', user.list);
 

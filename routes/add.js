@@ -1,6 +1,7 @@
 var jsonPath = '../clocks.json';
 var clocks = require(jsonPath);
 
+//Adds week string to json object
 function translateWeek(request) {
 	var weekString = "";
 
@@ -16,7 +17,9 @@ function translateWeek(request) {
 	return weekString;
 }
 
+//Converts 24 hour clock to 12 hour clock
 function to12(time24) {
+
 	var timearr = time24.split(":",2);
 	var hr = parseInt(timearr[0]);
 	var min = timearr[1];

@@ -4,5 +4,8 @@ var clocks = require("../clocks.json");
  */
 
 exports.view = function(req, res){
+  //Render the home page
   res.render('index', clocks);
+  //Add an event listener
+  
 };

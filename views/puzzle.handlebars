@@ -7,17 +7,23 @@
 </head>
 <body>
 	<div class="container">
-		<div id="countBox">
-			<div class="count"></div>
-			<div class="count"></div>
-			<div class="count"></div>
-		</div>
-		<div id="questionBox">{{question}}</div>
-		<div id="choiceBox">
-			<a><div class="choice">{{choice1}}</div></a>
-			<a><div class="choice">{{choice2}}</div></a>
-			<a><div class="choice">{{choice3}}</div></a>
-			<a><div class="choice">{{choice4}}</div></a>		
+		<div id="questionBox"><p class="buttonText">{{puzzle.question}}</p>
+			<div id="choiceBox">
+				<a href="/puzzle/answer?answer=a%20{{puzzle.solution}}&id={{puzzle.id}}&count={{count}}"><div class="choice">
+					<p class="buttonText">{{puzzle.choice.a}}</p></div></a>
+				<a href="/puzzle/answer?answer=b%20{{puzzle.solution}}&id={{puzzle.id}}&count={{count}}"><div class="choice">
+					<p class="buttonText">{{puzzle.choice.b}}</p></div></a>
+				<a href="/puzzle/answer?answer=c%20{{puzzle.solution}}&id={{puzzle.id}}&count={{count}}"><div class="choice">
+					<p class="buttonText">{{puzzle.choice.c}}</p></div></a>
+				<a href="/puzzle/answer?answer=d%20{{puzzle.solution}}&id={{puzzle.id}}&count={{count}}"><div class="choice">
+					<p class="buttonText">{{puzzle.choice.d}}</p></div></a>		
+			</div>
+			<div id="countBox">
+				<div style="background-color:{{ccolor.a}}" class="count"></div>
+				<div style="background-color:{{ccolor.b}}" class="count"></div>
+				<div style="background-color:{{ccolor.c}}" class="count"></div>
+				<span style="text-align: left;padding: 30px;" class="buttonText">{{outcome}}</span>
+			</div>
 		</div>
 	</div>
 </body>
