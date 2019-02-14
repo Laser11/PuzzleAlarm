@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="container">
-		<a href="create"><div class="bigButton" id="add"><p class="buttonText">Add Alarm</p></div></a>
+		
 		<div id="alarmsBox">
 			{{#each alarms}}
 			<div style="margin: 2px 0px;float:left;">
@@ -18,7 +18,7 @@
 						<div class="nameText">{{name}}</div>
 						<div class="timeText">{{time}}</span></div>
 						
-						<div class="timeText">{{week.text}}</div>
+						<div class="daysText">{{week.text}}</div>
 						
 				</div></a>
 				<!--a href="#" class="on"><div><p class="timeText">ON</p></div></a-->
@@ -26,7 +26,11 @@
 			</div>
 			{{/each}}			
 		</div>
-		<a href="puzzle/practice"><div class="bigButton" id="add"><p class="buttonText">Practice</p></div></a>
+
+		<a href="create">
+			<div class="bigButton" id="add"><p class="addAlarmButtonText">Add Alarm</p></div>
+		</a>
+		<a href="puzzle/practice"><div class="bigButton" id="add"><p class="practiceButtonText">Practice</p></div></a>
 		<!--a href="/options"><div class="bigButton" id="Options"><p class="buttonText">Options</p></div></a-->
 		<!--div><a href="/help"><div class="bigButton" id="Help"><p class="buttonText">Help</p></a></div-->
 	</div>
