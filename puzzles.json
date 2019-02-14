@@ -1,0 +1,15 @@
+{
+  "puzzles" : [
+    {
+        "id" : "",
+        "question" : "When is Christmas?",
+        "choice" : {
+           "a" : "Feb 11",
+           "b" : "Mar 25",
+           "c" : "Nov 13",
+           "d" : "Dec 25"
+        },
+        "solution" : "d"
+    }
+  ]
+}
