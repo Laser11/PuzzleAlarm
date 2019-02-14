@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="container">
-		<a href="create"><div class="bigButton" id="add"><p class="buttonText">Add Alarm</p></div></a>
+
 		<div id="alarmsBox">
 			{{#each alarms}}
 			<div style="margin: 2px 0px;float:left;">
@@ -15,14 +15,22 @@
 				<div class="alarm" id="{{name}}">
 						<div class="nameText">{{name}}</div>
 						<div class="timeText">{{time}}</div>
-						<div class="timeText">{{week}}</div>
+						<div class="daysText">{{week}}</div>
 					
 				</div><!--/a-->
 				<!--a href="#" class="on"><div><p class="timeText">ON</p></div></a-->
-				<a href="create?name={{name}}" class="editLink"><div><p class="buttonText">EDIT</p></div></a>
+				<a href="create?name={{name}}" class="editLink">
+					<div class="editButtonText">EDIT</div>
+				</a>
 			</div>
 			{{/each}}			
 		</div>
+
+		<a href="create">
+			<div class="bigButton" id="add">
+				<p class="addAlarmButtonText">Add Alarm</p>
+			</div>
+		</a>
 		<!--a href="/options"><div class="bigButton" id="Options"><p class="buttonText">Options</p></div></a-->
 		<!--div><a href="/help"><div class="bigButton" id="Help"><p class="buttonText">Help</p></a></div-->
 	</div>

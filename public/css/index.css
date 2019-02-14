@@ -35,7 +35,6 @@
 
 }
 
-
 .bigButton {
   height: 10%;
   background-color: rgb(100,100,100);
@@ -66,9 +65,30 @@
   background-color: rgb(140,140,140);
 }
 
+.addAlarmButtonText {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 150%;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+
+  font-family: sans-serif;
+}
+
 .buttonText {
   text-align: center;
+  vertical-align: middle;
   padding: 0 0;
+  font-size: 150%;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+
+  font-family: sans-serif;
+}
+
+.editButtonText {
+  text-align: center;
+  margin-top: 45px;
   font-size: 150%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
@@ -78,6 +98,7 @@
 
 .nameText {
   text-align: center;
+  margin-top: 10px;
   float: left;
   width:100%;
   height:30%;
@@ -90,11 +111,28 @@
 }
 
 .timeText {
-  width: 50%;  
+  margin-left: 15px;
+  margin-bottom: 10px;
+  vertical-align: middle;
+  width: 55%;  
   float: left;
   height:70%;
   font-size: 150%;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
+  color: rgb(255,255,255);
+
+  font-family: sans-serif;
+}
+
+.daysText {
+  width: 30%;  
+  margin-top: 3px;
+  margin-left: 10px;
+  vertical-align: middle;
+  float: left;
+  height:70%;
+  font-size: 125%;
+  letter-spacing: 3px;
   color: rgb(255,255,255);
 
   font-family: sans-serif;
