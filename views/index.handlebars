@@ -14,7 +14,7 @@
 		<div id="alarmsBox">
 			{{#each alarms}}
 			<div style="margin: 2px 0px;float:left;">
-				<a href="create?name={{name}}">
+				<a href="/create?name={{name}}">
 				<div class="alarm" id="{{name}}">
 						<div class="nameText">{{name}}</div>
 						<div class="timeText"><span class="timeSpan">{{time}}</span><span class="enableText"style="visibility:hidden">{{online}}</span></div>
@@ -28,7 +28,7 @@
 			{{/each}}			
 		</div>
 
-		<a href="create">
+		<a href="/create">
 			<div class="bigButton" id="add"><p class="addAlarmButtonText">Add Alarm</p></div>
 		</a>
 		<a href="/puzzle/practice"><div class="bigButton" id="add"><p class="practiceButtonText">Practice</p></div></a>

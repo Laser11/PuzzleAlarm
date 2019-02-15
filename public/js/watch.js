@@ -12,12 +12,13 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
-	setInterval(checkClock(),1000);
+	setInterval(checkClock,1000);
 }
 
 //Sets off an alarm when 
-function checkClock() {
+var checkClock = function checkClock() {
 	//Extracts system clock
+
 	var date = new Date();
 	var time = date.toLocaleTimeString();
 	time = time.substring(0,5) + time.substring(8);
@@ -28,7 +29,9 @@ function checkClock() {
 		 jQuery(this).find(".enableText").html() == "ON")
 		{
 			window.location.href = "/puzzle";
+			startingAlarm = true;
 		}	
 	});
+
 	
 }
