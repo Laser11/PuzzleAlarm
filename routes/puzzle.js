@@ -1,10 +1,11 @@
 var puzzleData = require('../puzzles.json');
+var clocks = require("../clocks.json");
+
 /*
  * GET puzzle page and alarm
  */
 exports.viewA = function(req, res){
-  
-  renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0);
+  renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"hidden");
 };
 
 // GET puzzle page after answering a question
@@ -13,25 +14,30 @@ exports.viewB = function(req, res) {
   var index = parseInt(req.query.id);
   var sol = puzzleData.puzzles[index].solution;
   var counter = parseInt(req.query.count);
-
   
 
   //Determine solution
   if (ans == sol) {
   	counter++;
+    console.log(counter);
+    if (counter > 2) {
+      console.log('Success!');
+      res.render('index',clocks);
+    }
+    index = Math.floor(Math.random() * puzzleData.puzzles.length);
   } else {
-  	index = Math.floor(Math.random() * puzzleData.puzzles.length);
+  	
   }
-  renderPuzzle(req,res,index,counter);
+  renderPuzzle(req,res,index,counter,req.query.visibility);
 }
 
 
 // GET puzzle page without alarm
 exports.view = function(req, res){
-  renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0);
+  renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"visible");
 };
 
-function renderPuzzle(req,res,ind,counter) {
+function renderPuzzle(req,res,ind,counter,visible) {
 	var chosen = puzzleData.puzzles[ind];
 	chosen.id = ind;
 
@@ -44,5 +50,7 @@ function renderPuzzle(req,res,ind,counter) {
 	  	"c" : (counter > 2) ? "green":"red",
 	};
 
-	res.render('puzzle', {"puzzle" : chosen, "count" : counter, "ccolor" : ccolor, "outcome" : outcome});
+  
+	res.render('puzzle', {"puzzle" : chosen, "count" : counter, "ccolor" : ccolor, "outcome" : outcome, "visible": visible});
+  
 }

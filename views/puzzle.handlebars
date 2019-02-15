@@ -3,19 +3,23 @@
 	<title>Solve the Puzzle</title>
 	<meta name="viewport" content="width=device-width, initial-scale:1.0">
 	<link rel="stylesheet" href="/css/index.css">
-
+	<script type="text/javascript">
+		function exitPuzzle() {
+			window.location.href = "/index";
+		}
+	</script>
 </head>
 <body>
 	<div class="container">
-		<div id="questionBox"><p class="buttonText">{{puzzle.question}}</p>
+		<div id="questionBox"><span id="exit" onclick="exitPuzzle()" style="visibility:{{visible}}">EXIT</span><p class="buttonText">{{puzzle.question}}</p>
 			<div id="choiceBox">
-				<a href="/puzzle/answer?answer=a&id={{puzzle.id}}&count={{count}}"><div class="choice">
+				<a href="/puzzle/answer?answer=a&id={{puzzle.id}}&count={{count}}&visibility={{visible}}"><div class="choice">
 					<p class="buttonText">{{puzzle.choice.a}}</p></div></a>
-				<a href="/puzzle/answer?answer=b&id={{puzzle.id}}&count={{count}}"><div class="choice">
+				<a href="/puzzle/answer?answer=b&id={{puzzle.id}}&count={{count}}&visibility={{visible}}"><div class="choice">
 					<p class="buttonText">{{puzzle.choice.b}}</p></div></a>
-				<a href="/puzzle/answer?answer=c&id={{puzzle.id}}&count={{count}}"><div class="choice">
+				<a href="/puzzle/answer?answer=c&id={{puzzle.id}}&count={{count}}&visibility={{visible}}"><div class="choice">
 					<p class="buttonText">{{puzzle.choice.c}}</p></div></a>
-				<a href="/puzzle/answer?answer=d&id={{puzzle.id}}&count={{count}}"><div class="choice">
+				<a href="/puzzle/answer?answer=d&id={{puzzle.id}}&count={{count}}&visibility={{visible}}"><div class="choice">
 					<p class="buttonText">{{puzzle.choice.d}}</p></div></a>		
 			</div>
 			<div id="countBox">
