@@ -6,13 +6,13 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
-var create = require('./routes/create')
-var add = require('./routes/add')
-var help = require('./routes/help')
-var puzzle = require('./routes/puzzle')
+var create = require('./routes/create');
+var add = require('./routes/add');
+var help = require('./routes/help');
+var puzzle = require('./routes/puzzle');
 // Example route
 // var user = require('./routes/user');
 
@@ -39,6 +39,7 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', index.view);
+app.get('/index', index.view);
 app.get('/create', create.view);
 app.get('/add', add.addClock);
 app.get('/help',help.view);

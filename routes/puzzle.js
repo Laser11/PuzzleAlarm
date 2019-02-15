@@ -9,16 +9,16 @@ exports.viewA = function(req, res){
 
 // GET puzzle page after answering a question
 exports.viewB = function(req, res) {
-  var ansarr = req.query.answer.split(" ",2);
-  var index;
+  var ans = req.query.answer;
+  var index = parseInt(req.query.id);
+  var sol = puzzleData.puzzles[index].solution;
   var counter = parseInt(req.query.count);
 
   
 
   //Determine solution
-  if (ansarr[0] == [ansarr[1]]) {
+  if (ans == sol) {
   	counter++;
-  	index = parseInt(req.query.id);
   } else {
   	index = Math.floor(Math.random() * puzzleData.puzzles.length);
   }
