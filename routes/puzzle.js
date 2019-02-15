@@ -1,5 +1,4 @@
 var puzzleData = require('../puzzles.json');
-var clocks = require("../clocks.json");
 
 /*
  * GET puzzle page and alarm
@@ -22,7 +21,7 @@ exports.viewB = function(req, res) {
     console.log(counter);
     if (counter > 2) {
       console.log('Success!');
-      res.render('index',clocks);
+      res.redirect('/index');
     }
     index = Math.floor(Math.random() * puzzleData.puzzles.length);
   } else {

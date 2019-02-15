@@ -1,10 +1,9 @@
 'use strict';
 var jsonPath = '../../clocks.json';
-var clocks = require(jsonPath);
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
-	
+	console.log(jsonPath);
 	initializePage();
 	
 })
@@ -21,14 +20,15 @@ function checkClock() {
 	//Extracts system clock
 	var date = new Date();
 	var time = date.toLocaleTimeString();
-	time = time.substring(0,5);
-	console.log(time);
-	//Compare time to json clocks
-	for (clock in clocks.alarm) {
-		//Goes to alarm when found
-		if (clock.rawTime == time) {
+	time = time.substring(0,5) + time.substring(8);
+	console.log(time);	
+	$(".timeText").each(function(index) {
+		console.log($(this).html());
+		if (jQuery(this).find(".timeSpan").html() == time &&
+		 jQuery(this).find(".enableText").html() == "ON")
+		{
 			window.location.href = "/puzzle";
-		}
-	}
+		}	
+	});
 	
 }
