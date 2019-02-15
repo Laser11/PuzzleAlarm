@@ -13,6 +13,8 @@ var create = require('./routes/create');
 var add = require('./routes/add');
 var help = require('./routes/help');
 var puzzle = require('./routes/puzzle');
+var login = require('./routes/login');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -38,7 +40,6 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-app.get('/', index.view);
 app.get('/index', index.view);
 app.get('/create', create.view);
 app.get('/add', add.addClock);
@@ -46,6 +47,10 @@ app.get('/help',help.view);
 app.get('/puzzle', puzzle.viewA);
 app.get('/puzzle/answer', puzzle.viewB);
 app.get('/puzzle/practice',puzzle.view);
+app.get('/', login.view);
+
+//app.get('/', loginPage.view);
+
 
 // Example route
 // app.get('/users', user.list);
