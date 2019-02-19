@@ -27,8 +27,9 @@
         },
 
         "difficulty" : {
+            "choice" : "hard",
             "easyCheck" : "",
-            "medCheck" : "checked",
+            "medCheck" : "",
             "hardCheck" : "checked"
         }
 

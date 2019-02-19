@@ -17,6 +17,27 @@ function translateWeek(request) {
 	return weekString;
 }
 
+function translateDifficulty(request) {
+	var diffJSON = {
+		choice : "",
+		easyCheck : "",
+		medCheck : "",
+		hardCheck: ""
+	};
+	diffJSON.choice = request.query.diff;
+	switch(diffJSON.choice) {
+		case "med":
+			diffJSON.medCheck = "checked";
+			break;
+		case "hard":
+			diffJSON.hardCheck = "checked";
+			break;
+		default:
+			diffJSON.easyCheck = "checked";
+	}
+	return diffJSON;
+}
+
 //Converts 24 hour clock to 12 hour clock
 function to12(time24) {
 
@@ -58,11 +79,7 @@ exports.addClock = function(request, response) { 
             memoryCheck : request.query.memChoice
         },
 
-        difficulty : {
-            easyCheck : request.query.easeDiff,
-            medCheck  : request.query.medDiff,
-            hardCheck : request.query.hardDiff
-        }
+        difficulty : translateDifficulty(request)
 	}
 	
 	name = newdata.name;

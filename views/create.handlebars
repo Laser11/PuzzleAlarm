@@ -28,7 +28,7 @@
 		</div>
 		
 		<!--p>End date: <input type="date" name=enddate value="{{date}}"></p-->
-		Unlock method:
+		Unlock Puzzles:
 			<div class="indentBlock">
 				<input type="checkbox" name="trivChoice" value="checked" {{puzzles.triviaCheck}}>Music
 			<br><input type="checkbox" name="mathChoice" value="checked" {{puzzles.mathCheck}}>Math
@@ -37,9 +37,9 @@
 		
 		Difficulty
 		<div class="indentBlock">
-			<input type="checkbox" name="easeDiff" value="checked" {{difficulty.easyCheck}}>Easy
-		<br><input type="checkbox" name="hardDiff" value="checked" {{difficulty.medCheck}}>Medium 
-		<br><input type="checkbox" name="medDiff" value="checked" {{difficulty.hardCheck}}>Hard
+			<input type="radio" name="diff" value="easy" {{difficulty.easyCheck}}>Easy
+		<br><input type="radio" name="diff" value="med" {{difficulty.medCheck}}>Medium 
+		<br><input type="radio" name="diff" value="hard" {{difficulty.hardCheck}}>Hard
 		</div>
 		
 		<input type="submit" class="sne" value="Save & Exit">
