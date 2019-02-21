@@ -58,6 +58,7 @@ exports.addClock = function(request, response) { 
 		rawTime : request.query.clktime,
 		time: to12(request.query.clktime),
 		date : request.query.date,
+		song : request.query.musChoice,
 		online : "ON",
 
 		singleUse: request.query.ongoing,
@@ -83,7 +84,7 @@ exports.addClock = function(request, response) { 
 	}
 	
 	name = newdata.name;
-
+	console.log(newdata);
 	//Overwrites a clock with the same name
 	for (var i=0; i<clocks.alarms.length; i++) {
 	  	//Renders the clock fields

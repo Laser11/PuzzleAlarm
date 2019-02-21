@@ -1,0 +1,19 @@
+{
+  "songs" : [
+    {
+        "id"   : "0",
+        "name" : "Annoying Alarm",
+        "path" : "annoyingAlarm.mp3"
+    },
+    {
+        "id"   : "1",
+        "name" : "Shooting Star",
+        "path" : "shootingStar.mp3"
+    },
+    {
+        "id"   : "2",
+        "name" : "Will They Stop Comming",
+        "path" : "willTheyStopComing.mp3"
+    }
+  ]
+}

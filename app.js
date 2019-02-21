@@ -7,6 +7,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
+var fs = require('fs');
 
 var index = require('./routes/index');
 var create = require('./routes/create');
@@ -14,7 +15,8 @@ var add = require('./routes/add');
 var help = require('./routes/help');
 var puzzle = require('./routes/puzzle');
 var login = require('./routes/login');
-
+var music = require('./routes/music')
+var puzzleLoader = require('./routes/puzzleLoader')
 // Example route
 // var user = require('./routes/user');
 
@@ -44,10 +46,16 @@ app.get('/index', index.view);
 app.get('/create', create.view);
 app.get('/add', add.addClock);
 app.get('/help',help.view);
-app.get('/puzzle', puzzle.viewA);
-app.get('/puzzle/answer', puzzle.viewB);
-app.get('/puzzle/practice',puzzle.view);
+app.get('/puzzle/:songID', puzzle.viewA);
+app.get('/puzzle',puzzle.view);
 app.get('/', login.view);
+//app.get('/music/:songpath', music.loadMusic)
+app.get('/music/:songpath', (req,res) => {
+	songPath = __dirname + '/soundFiles/' + req.params.songpath
+	res.setHeader("Content-Type", "audio/mpeg");
+	fs.createReadStream(songPath).pipe(res);
+});
+app.get('/json/puzzles',puzzleLoader.puzzleInfo);
 
 //app.get('/', loginPage.view);
 

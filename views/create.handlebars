@@ -3,6 +3,7 @@
 	<title>Create Alarm</title>
 	<meta name="viewport" content="width=device-width, initial-scale:1.0">
 	<link rel="stylesheet" href="/css/index.css">
+
 	<script type="text/javascript">
 		function deleteClock() {
 			window.location.href = "/index";
@@ -13,33 +14,41 @@
 	<form action="/add">
 		<input class="sne" type="button" value="Cancel" onclick="deleteClock()">
 		
-		<br>Name: <input type="text" name="clkname" value={{name}}>
-		<br>Time: <input type="time" name="clktime" value="{{rawTime}}">
-		<br>Ongoing? <input type="radio" name="ongoing" value="" checked>Yes <input type="radio" name="ongoing" value="checked" {{singleUse}}>No
+		<br>Name: <input type="text" name="clkname" value={{clocks.name}}>
+		<br>Time: <input type="time" name="clktime" value="{{clocks.rawTime}}">
+		<br>Ongoing? <input type="radio" name="ongoing" value="" checked>Yes <input type="radio" name="ongoing" value="checked" {{clocks.singleUse}}>No
 
 		<div class="indentBlock">
-			<input type="checkbox" name="monChoice" value="checked" {{week.monCheck}}>Mon
-			<input type="checkbox" name="tueChoice" value="checked" {{week.tuesCheck}}>Tue
-			<input type="checkbox" name="wedChoice" value="checked" {{week.wedCheck}}>Wed
-			<input type="checkbox" name="thuChoice" value="checked" {{week.thursCheck}}>Thu
-			<input type="checkbox" name="friChoice" value="checked" {{week.friCheck}}>Fri
-			<input type="checkbox" name="satChoice" value="checked" {{week.satCheck}}>Sat
-			<input type="checkbox" name="sunChoice" value="checked" {{week.sunCheck}}>Sun
+			<input type="checkbox" name="monChoice" value="checked" {{clocks.week.monCheck}}>Mon
+			<input type="checkbox" name="tueChoice" value="checked" {{clocks.week.tuesCheck}}>Tue
+			<input type="checkbox" name="wedChoice" value="checked" {{clocks.week.wedCheck}}>Wed
+			<input type="checkbox" name="thuChoice" value="checked" {{clocks.week.thursCheck}}>Thu
+			<input type="checkbox" name="friChoice" value="checked" {{clocks.week.friCheck}}>Fri
+			<input type="checkbox" name="satChoice" value="checked" {{clocks.week.satCheck}}>Sat
+			<input type="checkbox" name="sunChoice" value="checked" {{clocks.week.sunCheck}}>Sun
 		</div>
 		
-		<!--p>End date: <input type="date" name=enddate value="{{date}}"></p-->
-		Unlock Puzzles:
+		Alarm Sound:
 			<div class="indentBlock">
-				<input type="checkbox" name="trivChoice" value="checked" {{puzzles.triviaCheck}}>Music
-			<br><input type="checkbox" name="mathChoice" value="checked" {{puzzles.mathCheck}}>Math
-			<br><input type="checkbox" name="memChoice" value="checked" {{puzzles.memoryCheck}}>Memory
+				<input type="radio" name="diff" value="easy" {{clocks.difficulty.easyCheck}}>Easy
+			<br><input type="radio" name="diff" value="med" {{clocks.difficulty.medCheck}}>Medium 
+			<br><input type="radio" name="diff" value="hard" {{clocks.difficulty.hardCheck}}>Hard
+			</div>
+		<!--p>End date: <input type="date" name=enddate value="{{date}}"></p-->
+		Alarm Disabling Puzzles:
+			<div class="indentBlock">
+				<select name="musChoice">
+					{{#each music.songs}}
+					<option value="{{id}}">{{name}}</option>
+					{{/each}}
+				</select>
 			</div>
 		
 		Difficulty
 		<div class="indentBlock">
-			<input type="radio" name="diff" value="easy" {{difficulty.easyCheck}}>Easy
-		<br><input type="radio" name="diff" value="med" {{difficulty.medCheck}}>Medium 
-		<br><input type="radio" name="diff" value="hard" {{difficulty.hardCheck}}>Hard
+			<input type="radio" name="diff" value="easy" {{clocks.difficulty.easyCheck}}>Easy
+		<br><input type="radio" name="diff" value="med" {{clocks.difficulty.medCheck}}>Medium 
+		<br><input type="radio" name="diff" value="hard" {{clocks.difficulty.hardCheck}}>Hard
 		</div>
 		
 		<input type="submit" class="sne" value="Save & Exit">

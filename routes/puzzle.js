@@ -1,10 +1,11 @@
 var puzzleData = require('../puzzles.json');
+var musicData = require('../music.json');
 
 /*
  * GET puzzle page and alarm
  */
 exports.viewA = function(req, res){
-  renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"hidden");
+  renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"hidden",true);
 };
 
 // GET puzzle page after answering a question
@@ -27,29 +28,29 @@ exports.viewB = function(req, res) {
   } else {
   	
   }
-  renderPuzzle(req,res,index,counter,req.query.visibility);
+  renderPuzzle(req,res,index,counter,req.query.visibility,true);
 }
 
 
 // GET puzzle page without alarm
 exports.view = function(req, res){
-  renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"visible");
+  renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"visible",false);
 };
 
-function renderPuzzle(req,res,ind,counter,visible) {
+function renderPuzzle(req,res,ind,counter,visible,wantSong) {
 	var chosen = puzzleData.puzzles[ind];
 	chosen.id = ind;
 
 	var outcome = (req.query.count==counter) ? "Wrong":"";
 
-	//Decide the color
-	var ccolor = {
-		"a" : (counter > 0) ? "green":"red",
-	  	"b" : (counter > 1) ? "green":"red",
-	  	"c" : (counter > 2) ? "green":"red",
-	};
-
-  
-	res.render('puzzle', {"puzzle" : chosen, "count" : counter, "ccolor" : ccolor, "outcome" : outcome, "visible": visible});
+  //Get the song
+  var songID = parseInt(req.params.songID);
+  var songJSON = musicData.songs[songID];
+  if (wantSong) {
+    var songPath = songJSON.path;
+  } else {
+    var songPath = "";
+  }
+	res.render('puzzle', {"puzzle" : chosen, "count" : counter, "outcome" : outcome, "visible": visible, "songPath" : songPath});
   
 }

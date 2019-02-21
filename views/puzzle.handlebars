@@ -3,6 +3,9 @@
 	<title>Solve the Puzzle</title>
 	<meta name="viewport" content="width=device-width, initial-scale:1.0">
 	<link rel="stylesheet" href="/css/index.css">
+
+	<script src="js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="js/player.js"></script>
 	<script type="text/javascript">
 		function exitPuzzle() {
 			window.location.href = "/index";
@@ -10,23 +13,30 @@
 	</script>
 </head>
 <body>
+	<iframe src="/music/{{songPath}}" id="musicPlayer" allow="autoplay" style="display:none"></iframe>
+	<!--span class="songText"style="visibility:hidden">{{songPath}}</span-->
 	<div class="container">
-		<div id="questionBox"><span id="exit" onclick="exitPuzzle()" style="visibility:{{visible}}">EXIT</span><p class="buttonText">{{puzzle.question}}</p>
+		<div id="questionBox">
+			<span id="exit" onclick="exitPuzzle()" style="visibility:{{visible}}">EXIT</span>
+
+			<p id="question" class="buttonText">{{puzzle.question}}<span id="solution" style="visibility:hidden">{{puzzle.solution}}</span></p>
+			
 			<div id="choiceBox">
-				<a href="/puzzle/answer?answer=a&id={{puzzle.id}}&count={{count}}&visibility={{visible}}"><div class="choice">
-					<p class="buttonText">{{puzzle.choice.a}}</p></div></a>
-				<a href="/puzzle/answer?answer=b&id={{puzzle.id}}&count={{count}}&visibility={{visible}}"><div class="choice">
-					<p class="buttonText">{{puzzle.choice.b}}</p></div></a>
-				<a href="/puzzle/answer?answer=c&id={{puzzle.id}}&count={{count}}&visibility={{visible}}"><div class="choice">
-					<p class="buttonText">{{puzzle.choice.c}}</p></div></a>
-				<a href="/puzzle/answer?answer=d&id={{puzzle.id}}&count={{count}}&visibility={{visible}}"><div class="choice">
-					<p class="buttonText">{{puzzle.choice.d}}</p></div></a>		
+				<div class="choice" id="a">
+					<p class="buttonText">{{puzzle.choice.a}}</p></div>
+				<div class="choice" id="b">
+					<p class="buttonText">{{puzzle.choice.b}}</p></div>
+				<div class="choice" id="c">
+					<p class="buttonText">{{puzzle.choice.c}}</p></div>
+				<div class="choice" id="d">
+					<p class="buttonText">{{puzzle.choice.d}}</p></div>
 			</div>
+			<p class="buttonText" id="ans_output"></p>
+			<span id="countTotal" style="visibility:hidden">{{count}}</span>
 			<div id="countBox">
-				<div style="background-color:{{ccolor.a}}" class="count"></div>
-				<div style="background-color:{{ccolor.b}}" class="count"></div>
-				<div style="background-color:{{ccolor.c}}" class="count"></div>
-				<span style="text-align: left;padding: 30px;" class="buttonText">{{outcome}}</span>
+				<div id="count1" class="count"></div>
+				<div id="count2" class="count"></div>
+				<div id="count3" class="count"></div>
 			</div>
 		</div>
 	</div>

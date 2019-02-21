@@ -1,4 +1,5 @@
-var clocks = require("../clocks.json")
+var clocks = require("../clocks.json");
+var music = require("../music.json");
 /*
  * GET clock creation page.
  */
@@ -12,7 +13,7 @@ exports.view = function(req, res){
   	console.log(clocks.alarms[i].name);
   	//Renders the clock fields
   	if (clocks.alarms[i].name == name) {
-  		res.render('create', clocks.alarms[i]);
+  		res.render('create', {"clocks" : clocks.alarms[i], "music" : music});
   		return;
   	}
     
