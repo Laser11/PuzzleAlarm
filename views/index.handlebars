@@ -7,7 +7,11 @@
 	
 	<script src="js/jquery-1.11.0.js"></script>
 	<script src="js/watch.js"></script>
-	
+	<script type="text/javascript">
+		function editClock(name) {
+			window.location.href = "/create?name=" + name;
+		}
+	</script>
 </head>
 <body>
 	<div class="container">
@@ -15,14 +19,15 @@
 		<div id="alarmsBox">
 			{{#each alarms}}
 			<div style="margin: 2px 0px;float:left;">
-				<a href="/create?name={{name}}">
-				<div class="alarm" id="{{name}}">
-						<div class="nameText">{{name}}</div>
+				<div class="alarm" onclick="editClock('{{name}}')" id="{{name}}">
+						<div class="nameText">{{name}}
+							<a href="/remove?name={{name}}"><div class="exitText">X</div></a>
+						</div>
 						<div class="timeText"><span class="timeSpan">{{time}}</span><span class="enableText"style="visibility:hidden">{{online}}</span><span class="songText"style="visibility:hidden">{{song}}</span></div>
 						
 						<div class="daysText">{{week.text}}</div>
 						
-				</div></a>
+				</div>
 				<!--a href="#" class="on"><div><p class="timeText">ON</p></div></a-->
 				<!--a href="create?name={{name}}" class="editLink"><div><p class="buttonText">EDIT</p></div></a-->
 			</div>

@@ -4,7 +4,7 @@ var musicData = require('../music.json');
 /*
  * GET puzzle page and alarm
  */
-exports.viewA = function(req, res){
+exports.viewAlt = function(req, res){
   renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"hidden",true);
 };
 
@@ -22,11 +22,12 @@ function renderPuzzle(req,res,ind,counter,visible,wantSong) {
   //Get the song
   var songID = parseInt(req.params.songID);
   var songJSON = musicData.songs[songID];
+  var songPath = "";
+
   if (wantSong) {
-    var songPath = songJSON.path;
-  } else {
-    var songPath = "";
+    songPath = songJSON.path;
   }
+  
 	res.render('puzzle', {"puzzle" : chosen, "count" : counter, "outcome" : outcome, "visible": visible, "songPath" : songPath});
   
 }

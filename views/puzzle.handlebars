@@ -4,8 +4,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale:1.0">
 	<link rel="stylesheet" href="/css/index.css">
 
-	<script type="text/javascript" src="js/jquery-1.11.0.js"></script>
-	<script type="text/javascript" src="js/player.js"></script>
+	<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+	<script type="text/javascript" src="/js/player.js"></script>
 	<script type="text/javascript">
 		function exitPuzzle() {
 			window.location.href = "/index";
@@ -13,8 +13,8 @@
 	</script>
 </head>
 <body>
-	<!--iframe src="/music/{{songPath}}" id="musicPlayer" allow="autoplay" style="display:none"></iframe-->
-	<!--span class="songText"style="visibility:hidden">{{songPath}}</span-->
+	<!--iframe src="/music/{{paths.songPath}}" id="musicPlayer" allow="autoplay" style="display:none"></iframe-->
+
 	<div class="container">
 		<div id="questionBox">
 			<span id="exit" onclick="exitPuzzle()" style="visibility:{{visible}}">EXIT</span>

@@ -59,7 +59,7 @@ exports.addClock = function(request, response) { 
 		time: to12(request.query.clktime),
 		date : request.query.date,
 		song : request.query.musChoice,
-		online : "ON",
+		online : request.query.online,
 
 		singleUse: request.query.ongoing,
 		

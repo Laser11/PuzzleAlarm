@@ -9,14 +9,18 @@ var path = require('path');
 var handlebars = require('express3-handlebars');
 var fs = require('fs');
 
+var login = require('./routes/login');
 var index = require('./routes/index');
+
 var create = require('./routes/create');
 var add = require('./routes/add');
+var remove = require('./routes/remove');
+
 var help = require('./routes/help');
 var puzzle = require('./routes/puzzle');
-var login = require('./routes/login');
-var music = require('./routes/music')
-var puzzleLoader = require('./routes/puzzleLoader')
+var music = require('./routes/music');
+var puzzleLoader = require('./routes/puzzleLoader');
+
 // Example route
 // var user = require('./routes/user');
 
@@ -42,13 +46,16 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
+app.get('/', login.view);
 app.get('/index', index.view);
 app.get('/create', create.view);
-app.get('/add', add.addClock);
+app.get('/create/add', add.addClock);
+app.get('/remove', remove.removeClock);
 app.get('/help',help.view);
-app.get('/puzzle/:songID', puzzle.viewA);
+
 app.get('/puzzle',puzzle.view);
-app.get('/', login.view);
+app.get('/puzzle/:songID', puzzle.viewAlt);
+
 //app.get('/music/:songpath', music.loadMusic)
 app.get('/music/:songpath', (req,res) => {
 	songPath = __dirname + '/soundFiles/' + req.params.songpath

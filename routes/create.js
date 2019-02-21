@@ -16,10 +16,14 @@ exports.view = function(req, res){
   	//Renders the clock fields
   	if (clocks.alarms[i].name == name) {
       var songID = parseInt(clocks.alarms[i].song);
-      
+      var onlineChecked = "";
+
       if (isNaN(songID)) songID = 0;
+
+      if (clocks.alarms[i].online == "OFF") onlineChecked = "checked";
+
       songs[songID].isChecked = "selected";
-  		res.render('create', {"clocks" : clocks.alarms[i], "songs" : songs});
+  		res.render('create', {"clocks" : clocks.alarms[i], "songs" : songs, "offlineChecked" : onlineChecked });
   		return;
   	}
     
@@ -58,6 +62,6 @@ exports.view = function(req, res){
         }
 
     };
-  res.render('create', {"clocks" : defaultClock, "songs" : songs});
+  res.render('create', {"clocks" : defaultClock, "songs" : songs, "offlineChecked" : "checked" });
   
 };
