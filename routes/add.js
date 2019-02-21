@@ -84,7 +84,7 @@ exports.addClock = function(request, response) { 
 	}
 	
 	name = newdata.name;
-	console.log(newdata);
+	//console.log(newdata);
 	//Overwrites a clock with the same name
 	for (var i=0; i<clocks.alarms.length; i++) {
 	  	//Renders the clock fields

@@ -14,7 +14,7 @@
 	<form action="/add">
 		<input class="sne" type="button" value="Cancel" onclick="deleteClock()">
 		
-		<br>Name: <input type="text" name="clkname" value={{clocks.name}}>
+		<br>Name: <input type="text" name="clkname" value="{{clocks.name}}">
 		<br>Time: <input type="time" name="clktime" value="{{clocks.rawTime}}">
 		<br>Ongoing? <input type="radio" name="ongoing" value="" checked>Yes <input type="radio" name="ongoing" value="checked" {{clocks.singleUse}}>No
 
@@ -38,8 +38,8 @@
 		Alarm Disabling Puzzles:
 			<div class="indentBlock">
 				<select name="musChoice">
-					{{#each music.songs}}
-					<option value="{{id}}">{{name}}</option>
+					{{#each songs}}
+					<option value="{{id}}" {{isChecked}}>{{name}}</option>
 					{{/each}}
 				</select>
 			</div>
