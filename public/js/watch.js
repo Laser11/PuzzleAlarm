@@ -21,16 +21,21 @@ function checkClock() {
 	var date = new Date();
 	var timearr = date.toLocaleTimeString().split(' ');
 	var timearr2 = timearr[0].split(':');
-	var time = timearr2[0] + ':' + timearr2[1] + ' ' + timearr[1];
+	var time = timearr2[0] + ":" + timearr2[1] + " " + timearr[1];
+	time = time.replace(/[^ -~]/g,'');
 	
 	//Extracts and examines stored alarm
 	$(".timeText").each(function(index) {
-		if (jQuery(this).find(".timeSpan").html() == time &&
-		 jQuery(this).find(".enableText").html() == "ON")
+		var clockTime = jQuery(this).find(".timeSpan").text();
+		var isEnabled = jQuery(this).find(".enableText").text();
+		var isMatching = (clockTime == time);
+		isMatching = (isEnabled == "ON");
+		if (clockTime == time &&
+			isEnabled == "ON")
 		{
 
 			var id = jQuery(this).find(".songText").html()
-			window.location.href = "/puzzle?songID=" + id;
+			window.location.href = "/puzzle/" + id;
 			
 		}	
 	});

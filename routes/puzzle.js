@@ -8,30 +8,6 @@ exports.viewA = function(req, res){
   renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"hidden",true);
 };
 
-// GET puzzle page after answering a question
-exports.viewB = function(req, res) {
-  var ans = req.query.answer;
-  var index = parseInt(req.query.id);
-  var sol = puzzleData.puzzles[index].solution;
-  var counter = parseInt(req.query.count);
-  
-
-  //Determine solution
-  if (ans == sol) {
-  	counter++;
-    console.log(counter);
-    if (counter > 2) {
-      console.log('Success!');
-      res.redirect('/index');
-    }
-    index = Math.floor(Math.random() * puzzleData.puzzles.length);
-  } else {
-  	
-  }
-  renderPuzzle(req,res,index,counter,req.query.visibility,true);
-}
-
-
 // GET puzzle page without alarm
 exports.view = function(req, res){
   renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"visible",false);

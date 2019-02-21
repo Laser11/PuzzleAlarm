@@ -12,14 +12,6 @@ $(document).ready(function() {
  */
 function initializePage() {
 	$(".choice").click(checkAnswer);
-	//WARNING: Gets stuck here.
-	loadMusic();
-
-}
-
-function loadMusic() {
-	//Play the song
-	document.getElementById('musicPlayer').play();
 }
 
 //Sets off an alarm when 
