@@ -28,14 +28,15 @@
 			<input type="checkbox" name="sunChoice" value="checked" {{clocks.week.sunCheck}}>Sun
 		</div>
 		
-		Alarm Sound:
+		Alarm Disabling Puzzles:
 			<div class="indentBlock">
-				<input type="radio" name="diff" value="easy" {{clocks.difficulty.easyCheck}}>Easy
-			<br><input type="radio" name="diff" value="med" {{clocks.difficulty.medCheck}}>Medium 
-			<br><input type="radio" name="diff" value="hard" {{clocks.difficulty.hardCheck}}>Hard
+				<input type="checkbox" name="trivChoice" value="checked" {{clocks.puzzles.triviaCheck}}>Music
+			<br><input type="checkbox" name="mathChoice" value="checked" {{clocks.puzzles.mathCheck}}>Math
+			<br><input type="checkbox" name="memChoice" value="checked" {{clocks.puzzles.memoryCheck}}>Memory
+			
 			</div>
 		<!--p>End date: <input type="date" name=enddate value="{{date}}"></p-->
-		Alarm Disabling Puzzles:
+		Alarm Sound:
 			<div class="indentBlock">
 				<select name="musChoice">
 					{{#each songs}}
