@@ -7,10 +7,12 @@ var clocks = require('../clocks.json');
  exports.viewAlt = function(req, res){
   var name = req.query.name;
   //Searches the json for the clock with the name
-  for (var i=0; !isNaN(name) && i<clocks.alarms.length; i++) {
+  for (var i=0; i<clocks.alarms.length; i++) {
     //Disables the clock
+      console.log(name);
     if (clocks.alarms[i].name == name) {
       clocks.alarms[i].online = "OFF";
+      console.log(clocks.alarms[i].online);
     }
     
   }
