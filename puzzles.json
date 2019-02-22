@@ -10,6 +10,28 @@
            "d" : "Dec 25"
         },
         "solution" : "d"
+    },
+    {
+        "id" : "",
+        "question" : "Who is the first president?",
+        "choice" : {
+           "a" : "George Washington",
+           "b" : "Andrew Jackson",
+           "c" : "John Quincy Adams",
+           "d" : "Thomas Jefferson"
+        },
+        "solution" : "a"
+    },
+    {
+        "id" : "",
+        "question" : "Which of the four has the largest population?",
+        "choice" : {
+           "a" : "France",
+           "b" : "Germany",
+           "c" : "Indonesia",
+           "d" : "Russia"
+        },
+        "solution" : "c"
     }
   ]
 }

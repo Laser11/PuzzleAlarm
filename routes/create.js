@@ -39,20 +39,20 @@ exports.view = function(req, res){
         "singleUse" : "checked",
         
         "week" : {
-            "monCheck" : "",
-            "tuesCheck" : "",
-            "wedCheck" : "",
-            "thursCheck" : "",
-            "friCheck" : "",
-            "satCheck" : "",
-            "sunCheck" : "",
-            "text" : ""
+            "monCheck" : "checked",
+            "tuesCheck" : "checked",
+            "wedCheck" : "checked",
+            "thursCheck" : "checked",
+            "friCheck" : "checked",
+            "satCheck" : "checked",
+            "sunCheck" : "checked",
+            "text" : "checked"
         },
 
         "puzzles" : {
-            "triviaCheck" : "",
-            "mathCheck" : "",
-            "memoryCheck" : ""
+            "triviaCheck" : "checked",
+            "mathCheck" : "checked",
+            "memoryCheck" : "checked"
         },
 
         "difficulty" : {

@@ -104,6 +104,10 @@
   margin: 5%;
 }
 
+.choice .buttonText {
+  margin: 0px;
+}
+
 .count {
   display: inline-block;
   margin: 20px 5px;

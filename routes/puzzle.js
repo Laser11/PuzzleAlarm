@@ -16,7 +16,7 @@ exports.viewAlt = function(req, res){
   }
 
   //Render the puzzle page
-  renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"hidden",true);
+  renderPuzzle(req,res,"hidden",true);
 };
 
 // GET puzzle page without alarm
@@ -24,14 +24,11 @@ exports.view = function(req, res){
 
 
   //Render the puzzle page
-  renderPuzzle(req,res,Math.floor(Math.random() * puzzleData.puzzles.length),0,"visible",false);
+  renderPuzzle(req,res,"visible",false);
 };
 
-function renderPuzzle(req,res,ind,counter,visible,wantSong) {
-	var chosen = puzzleData.puzzles[ind];
-	chosen.id = ind;
+function renderPuzzle(req,res,visible,wantSong) {
 
-	var outcome = (req.query.count==counter) ? "Wrong":"";
 
   //Get the song
   var songID = parseInt(req.params.songID);
@@ -42,6 +39,6 @@ function renderPuzzle(req,res,ind,counter,visible,wantSong) {
     songPath = songJSON.path;
   }
   
-	res.render('puzzle', {"puzzle" : chosen, "count" : counter, "outcome" : outcome, "visible": visible, "songPath" : songPath});
+	res.render('puzzle', {"visible": visible, "songPath" : songPath});
   
 }
