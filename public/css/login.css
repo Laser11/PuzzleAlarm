@@ -191,14 +191,28 @@
   font-family: sans-serif;
 }
 
-#fbBut{
-  position: absolute;
+.facebookLogin{
   text-align: center;
+}
+
+#fbBut{
+    font-size: 14px;
+
+    left:42%;
 }
 
 .p{
   text-align: center;
 }
+
+h1 {
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+}
+
 
 h4 {
   position: absolute;
@@ -206,11 +220,6 @@ h4 {
   right: 10px;
 }
 
-h3 {
-  left: 5px;
-
-  text-align: center;
-}
 
 a {
   text-decoration: none;
