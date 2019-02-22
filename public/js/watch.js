@@ -1,5 +1,14 @@
 'use strict';
 
+var weekday = new Array(7);
+weekday[0] =  "Su";
+weekday[1] = "M";
+weekday[2] = "Tu";
+weekday[3] = "W";
+weekday[4] = "Th";
+weekday[5] = "F";
+weekday[6] = "Sa";
+
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 
@@ -20,22 +29,30 @@ function checkClock() {
 
 	var date = new Date();
 	var timearr = date.toLocaleTimeString().split(' ');
+	var today = date.getDay();
 	var timearr2 = timearr[0].split(':');
 	var time = timearr2[0] + ":" + timearr2[1] + " " + timearr[1];
 	time = time.replace(/[^ -~]/g,'');
-	
+
 	//Extracts and examines stored alarm
-	$(".timeText").each(function(index) {
-		var clockTime = jQuery(this).find(".timeSpan").text();
-		var isEnabled = jQuery(this).find(".enableText").text();
-		var isMatching = (clockTime == time);
-		isMatching = (isEnabled == "ON");
+	$(".alarm").each(function(index) {
+		var clockName = jQuery(this).find(".nameText .theName").text();
+		var clockTime = jQuery(this).find(".timeText .timeSpan").text();
+		var isEnabled = jQuery(this).find(".timeText .enableText").text();
+		var clockDays = jQuery(this).find(".daysText").text().split(' ');
+		
+
+		var isDay = clockDays.some(function(elem) {
+			return elem == weekday[today];
+		});
+
 		if (clockTime == time &&
+			isDay &&
 			isEnabled == "ON")
 		{
 
 			var id = jQuery(this).find(".songText").html()
-			window.location.href = "/puzzle/" + id;
+			window.location.href = "/puzzle/" + id + "?name=" + clockName;
 			
 		}	
 	});

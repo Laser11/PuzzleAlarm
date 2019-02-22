@@ -20,7 +20,7 @@
 			{{#each alarms}}
 			<div style="margin: 2px 0px;float:left;">
 				<div class="alarm" onclick="editClock('{{name}}')" id="{{name}}">
-						<div class="nameText">{{name}}
+						<div class="nameText"><span class="theName">{{name}}</span>
 							<a href="/remove?name={{name}}"><div class="exitText">X</div></a>
 						</div>
 						<div class="timeText"><span class="timeSpan">{{time}}</span><span class="enableText"style="visibility:hidden">{{online}}</span><span class="songText"style="visibility:hidden">{{song}}</span></div>

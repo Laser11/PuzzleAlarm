@@ -11,11 +11,15 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	setTimeout(function() {
+		$('#exit').css('visibility','visible');
+	},60000)
 	$(".choice").click(checkAnswer);
 }
 
 //Sets off an alarm when 
-function checkAnswer() {
+function checkAnswer(e) {
+	e.preventDefault();
 	//Extracts the stored answer
 	var solution = $('#solution').text();
 	var answer = jQuery(this).attr('id');

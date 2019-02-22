@@ -13,11 +13,10 @@
 <body>
 	<form action="/create/add">
 		<input class="sne" type="button" value="Cancel" onclick="deleteClock()">
-		
+		<br><input type="radio" name="online" value="ON" checked>ON <input type="radio" name="online" value="OFF" {{offlineChecked}}>OFF
 		<br>Name: <input type="text" name="clkname" value="{{clocks.name}}">
 		<br>Time: <input type="time" name="clktime" value="{{clocks.rawTime}}">
-		<br>Enabled? <input type="radio" name="online" value="ON" checked>Yes <input type="radio" name="online" value="OFF" {{offlineChecked}}>No
-		<br>Ongoing? <input type="radio" name="ongoing" value="" checked>Yes <input type="radio" name="ongoing" value="checked" {{clocks.singleUse}}>No
+		<!--div>Ongoing? <input type="radio" name="ongoing" value="" checked>Yes <input type="radio" name="ongoing" value="checked" {{clocks.singleUse}}>No </div-->
 
 		<div class="indentBlock">
 			<input type="checkbox" name="monChoice" value="checked" {{clocks.week.monCheck}}>Mon
