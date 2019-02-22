@@ -13,7 +13,9 @@
 	</script>
 </head>
 <body>
-	<!--iframe src="/music/{{paths.songPath}}" id="musicPlayer" allow="autoplay" style="display:none"></iframe-->
+	<audio id="musicPlayer" style="display:none" autoplay loop>
+  		<source src="/music/{{songPath}}" type="audio/mpeg">
+	</audio>
 
 	<div class="container">
 		<div id="questionBox">

@@ -28,8 +28,9 @@ exports.view = function(req, res){
   	}
     
   }
+  songs[0].isChecked = "selected";
   var defaultClock = {
-        "name" : "",
+        "name" : "Jane Doe",
         "rawTime" : "00:00",
         "time" : "12:00 AM",
         "date" : "1970-01-01",
@@ -55,13 +56,13 @@ exports.view = function(req, res){
         },
 
         "difficulty" : {
-            "choice" : "",
-            "easyCheck" : "",
+            "choice" : "easy",
+            "easyCheck" : "checked",
             "medCheck" : "",
             "hardCheck" : ""
         }
 
     };
-  res.render('create', {"clocks" : defaultClock, "songs" : songs, "offlineChecked" : "checked" });
+  res.render('create', {"clocks" : defaultClock, "songs" : songs, "offlineChecked" : "" });
   
 };
