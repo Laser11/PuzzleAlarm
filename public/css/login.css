@@ -10,13 +10,6 @@
   bottom: 0px;
 }
 
-#countBox {
-  position: fixed;
-  left:0px;
-  bottom: 10px;
-  text-align: center;
-}
-
 #exit {
   position: relative;
   top:10;
@@ -73,9 +66,7 @@
 
 .alarm {
   width: 100%;
-  height: intrinsic;
-  height: -moz-max-content;
-  height: -webkit-fit-content;
+  height: 20%;
   float: left;
   background-color: rgb(140,140,140);
 }
@@ -101,28 +92,20 @@
   background-color: rgb(100,100,100);
   height:10%;
   width:40%;
-  margin: 5%;
+  margin:4%;
 }
 
 .count {
-  display: inline-block;
-  margin: 20px 5px;
+  float:left;
+  margin: 10px;
   height: 40px;
   width: 40px;
-  background-color: red;
-}
-
-@media screen and (max-width: 600px) {
-  .choice {
-    width: 100%;
-    margin: 3% 0;
-  }
 }
 
 .dateText {
   float:right;
   width:50%;
-  height:10%;
+  height:70%;
   font-size: 100%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
@@ -156,24 +139,11 @@
   padding-top: 1%;
   vertical-align: middle;
   float: left;
-  height:10%;
+  height:70%;
   left:10%;
   font-size: 125%;
   letter-spacing: 3px;
   color: rgb(255,255,255);
-
-  font-family: sans-serif;
-}
-
-.exitText {
-  padding-right: 5%; 
-  padding-top: 0%;
-  width: 20px;
-  vertical-align: middle;
-  float: right;
-  font-size: 200%;
-  letter-spacing: 3px;
-  color: rgb(70,70,70);
 
   font-family: sans-serif;
 }
@@ -184,7 +154,7 @@
 
   float: left;
   width:100%;
-  height:10%;
+  height:30%;
   font-size: 100%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
@@ -212,7 +182,7 @@
   vertical-align: middle;
   width: 50%;
   float: left;
-  height:10%;
+  height:70%;
   left:10%;
   font-size: 175%;
   letter-spacing: 5px;
@@ -221,14 +191,28 @@
   font-family: sans-serif;
 }
 
-#fbBut{
-  position: absolute;
+.facebookLogin{
   text-align: center;
+}
+
+#fbBut{
+    font-size: 14px;
+
+    left:42%;
 }
 
 .p{
   text-align: center;
 }
+
+h1 {
+  text-align: center;
+}
+
+h3{
+  text-align: center;
+}
+
 
 h4 {
   position: absolute;
@@ -236,11 +220,6 @@ h4 {
   right: 10px;
 }
 
-h3 {
-  left: 5px;
-
-  text-align: center;
-}
 
 a {
   text-decoration: none;

@@ -1,28 +1,49 @@
+
+<!doctype html>
+
 <html>
 <head>
-	<title>Welcome to Solve for Silence!</title>
-	<meta name="viewport" content="width=device-width, initial-scale:1.0">
-	<link rel="stylesheet" href="/css/index.css">
+	<title>Solve for Silence</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/css/bootstrap.min.css" rel="stylesheet">
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="/css/introHCI.css" rel="stylesheet">
+	<link rel="stylesheet" href="/css/login.css">
+
+
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/introHCI.js"></script>
+	{{> facebook}}
+	<script src="/js/facebook.js"></script>
 
 </head>
-<body>
-	<body>
-		<h1> Please Sign-Up/Sign-In! </h1>
-		<form action="/action_page.php" method="get">
-		<h4>Login </h4>
-		<p5>Username: </p5>
-		<input type="text" Email adress=""> </br> </br>
-		<p6>Password: </p6>
-		<input type="password" > </br>
-		<nav>
-			<!--<input class="sne" type="button" value="Login">  -->
-			<a href="/index/" <a/>
-		</nav>
 
-		</form>
-		<h4> Log In! </h4>
-			<fb:login-button id="fbBut" scope="public_profile,email" onlogin="checkLoginState();">
+<body>
+	<div class="container">
+		<!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+		<!-- p means paragraph -->
+		<div class="topOfPage">
+			<h1 id="name">Welcome!</h1>
+			
+			<p class="facebookLogin">Please login through Facebook to use Solve for Silence</p>
+			<fb:login-button id="fbBut" class="fbLog" scope="public_profile,email" onlogin="checkLoginState();">
 			</fb:login-button>
-	</body>
+		</div>
+
+		<div id="facebookPhoto" class="profile">
+			<h3>After Logging In, Verify It's You and Continue to the App</h3>
+			<img id="photo" class='img-responsive' src="" />
+		</div>
+
+		<div class="toTheApp">
+			<a href="/index/"><h4> Click HERE to Continue to App </h4> </a>
+		</div>
+		<!-- divs are invisible structuring elements that stack vertically by default. Use them to organize your code -->
+		<!-- img tags are images. Lorem Pixel will deliver random images; handy! -->
+		<!-- a are anchors, also known as hyperlinks. Use the href attribute to tell the browser where to go when the user clicks -->
+		
+
 </body>
 </html>
