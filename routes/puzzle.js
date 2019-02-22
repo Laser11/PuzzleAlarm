@@ -4,7 +4,7 @@ var clocks = require('../clocks.json');
 /*
  * GET puzzle page and alarm
  */
-exports.viewAlt = function(req, res){
+ exports.viewAlt = function(req, res){
   var name = req.query.name;
   //Searches the json for the clock with the name
   for (var i=0; !isNaN(name) && i<clocks.alarms.length; i++) {
@@ -39,6 +39,6 @@ function renderPuzzle(req,res,visible,wantSong) {
     songPath = songJSON.path;
   }
   
-	res.render('puzzle', {"visible": visible, "songPath" : songPath});
+  res.render('puzzle', {"visible": visible, "songPath" : songPath});
   
 }
