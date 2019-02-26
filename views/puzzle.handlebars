@@ -13,11 +13,11 @@
 	</script>
 </head>
 <body>
-	<audio id="musicPlayer"  autoplay loop>
+	<!--audio id="musicPlayer"  autoplay loop>
   		<source src="/music/{{songPath}}" type="audio/mpeg">
   		Audio file not compatible.
-	</audio>
-
+	</audio-->
+	<iframe src="/music/{{songPath}}" allow="autoplay" style="display:none;"></iframe>
 	<div class="container">
 		<div id="questionBox">
 			<span id="exit" onclick="exitPuzzle()" style="visibility:{{visible}}">EXIT</span>
