@@ -48,7 +48,7 @@ function checkClock() {
 
 		if (clockTime == time &&
 			isDay &&
-			isEnabled == "ON")
+			isEnabled == "true")
 		{
 
 			var id = jQuery(this).find(".songText").html()

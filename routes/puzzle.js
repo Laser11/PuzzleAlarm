@@ -11,7 +11,7 @@ var clocks = require('../clocks.json');
     //Disables the clock
       console.log(name);
     if (clocks.alarms[i].name == name) {
-      clocks.alarms[i].online = "OFF";
+      clocks.alarms[i].online = false;
       console.log(clocks.alarms[i].online);
     }
     

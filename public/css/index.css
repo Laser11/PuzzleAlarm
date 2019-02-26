@@ -134,6 +134,16 @@
   font-family: sans-serif; 
 }
 
+.dot {
+  position:absolute;
+  margin:5px;
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 .indentBlock {
   margin-left: 4%;
   width:auto;

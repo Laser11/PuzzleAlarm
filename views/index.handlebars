@@ -20,6 +20,11 @@
 			{{#each alarms}}
 			<div style="margin: 2px 0px;float:left;">
 				<div class="alarm" onclick="editClock('{{name}}')" id="{{name}}">
+						{{#if online}}
+							<span style="background-color:green" class="dot"></span>
+						{{else}}
+							<span style="background-color:red" class="dot"></span>
+						{{/if}}
 						<div class="nameText"><span class="theName">{{name}}</span>
 							<a href="/remove?name={{name}}"><div class="exitText">X</div></a>
 						</div>

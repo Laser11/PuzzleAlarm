@@ -4,7 +4,6 @@ var music = require("../music.json");
 /*
  * GET clock creation page.
  */
-
 exports.view = function(req, res){
   //Extract which alarm we're using
   var name = req.query.name;
@@ -20,10 +19,8 @@ exports.view = function(req, res){
 
       if (isNaN(songID)) songID = 0;
 
-      if (clocks.alarms[i].online == "OFF") onlineChecked = "checked";
-
       songs[songID].isChecked = "selected";
-  		res.render('create', {"clocks" : clocks.alarms[i], "songs" : songs, "offlineChecked" : onlineChecked });
+  		res.render('create', {"clocks" : clocks.alarms[i], "songs" : songs});
   		return;
   	}
     
@@ -34,7 +31,7 @@ exports.view = function(req, res){
         "rawTime" : "00:00",
         "time" : "12:00 AM",
         "date" : "1970-01-01",
-        "online" : "ON",
+        "online" : true,
         "songID" : "0",
         "singleUse" : "checked",
         
@@ -63,6 +60,6 @@ exports.view = function(req, res){
         }
 
     };
-  res.render('create', {"clocks" : defaultClock, "songs" : songs, "offlineChecked" : "" });
+  res.render('create', {"clocks" : defaultClock, "songs" : songs});
   
 };
