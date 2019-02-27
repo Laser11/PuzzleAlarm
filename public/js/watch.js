@@ -20,14 +20,21 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	//Alarm editing
 	$('.alarm').click(function(e) {
 		var name = $(this).find('.theName').text();
 		var online = !(jQuery(this).find(".switch input").prop('checked'))
 		window.location.href = "/create?name=" + name + "&online=" + online;
-	})
+	});
+	//On/off slide
 	$('.switch').click(function(e) {
+		var color = 'rgb(180,180,180)';
+		if(!$(this).find('input').prop('checked')) {
+			color = 'rgb(100,100,100)';	
+		} 
+		$(this).closest('.alarm').css('background-color',color);
 		e.stopPropagation();
-	})
+	});
 	setInterval(checkClock,1000);
 
 }
