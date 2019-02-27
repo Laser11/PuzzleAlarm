@@ -20,13 +20,16 @@
 				<div class="alarm" id="{{name}}">
 						<div class="nameText"><span class="theName">{{name}}</span>
 							<label class="switch">
-							  <input type="checkbox">
-							  <span class="slider round"></span>
+								{{#if online}}
+									<input type="checkbox">
+								{{else}}
+									<input type="checkbox" checked>
+								{{/if}}
+								<span class="slider round"></span>
 							</label>
 						</div>
 						<div class="timeText">
 							<span class="timeSpan">{{time}}</span>
-							<span class="enableText"style="visibility:hidden">{{online}}</span>
 							<span class="songText"style="visibility:hidden">{{song}}</span>
 						</div>
 						

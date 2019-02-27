@@ -22,7 +22,8 @@ $(document).ready(function() {
 function initializePage() {
 	$('.alarm').click(function(e) {
 		var name = $(this).find('.theName').text();
-		window.location.href = "/create?name=" + name;
+		var online = !(jQuery(this).find(".switch input").prop('checked'))
+		window.location.href = "/create?name=" + name + "&online=" + online;
 	})
 	$('.switch').click(function(e) {
 		e.stopPropagation();
@@ -46,7 +47,7 @@ function checkClock() {
 	$(".alarm").each(function(index) {
 		var clockName = jQuery(this).find(".nameText .theName").text();
 		var clockTime = jQuery(this).find(".timeText .timeSpan").text();
-		var isEnabled = jQuery(this).find(".timeText .enableText").text();
+		var isEnabled = !(jQuery(this).find(".switch input").prop('checked'));
 		var clockDays = jQuery(this).find(".daysText").text().split(' ');
 		
 
@@ -56,7 +57,7 @@ function checkClock() {
 
 		if (clockTime == time &&
 			isDay &&
-			isEnabled == "true")
+			isEnabled)
 		{
 
 			var id = jQuery(this).find(".songText").html()

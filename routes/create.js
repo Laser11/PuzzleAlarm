@@ -15,7 +15,9 @@ exports.view = function(req, res){
   	//Renders the clock fields
   	if (clocks.alarms[i].name == name) {
       var songID = parseInt(clocks.alarms[i].song);
-      var onlineChecked = "";
+      var onlineChecked = (req.query.online == "true");
+
+      clocks.alarms[i].online = onlineChecked;
 
       if (isNaN(songID)) songID = 0;
 
