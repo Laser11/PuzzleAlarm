@@ -27,16 +27,28 @@ function initializePage() {
 		window.location.href = "/create?name=" + name + "&online=" + online;
 	});
 	//On/off slide
-	$('.switch').click(function(e) {
+	$('.switch').each(updateColors);
+	$('.switch').click(updateColors1);
+	setInterval(checkClock,1000);
+
+}
+
+function updateColors() {
+		var color = 'rgb(180,180,180)';
+		if(!$(this).find('input').prop('checked')) {
+			color = 'rgb(100,100,100)';	
+		} 
+		$(this).closest('.alarm').css('background-color',color);
+		
+}
+
+function updateColors1(e) {
 		var color = 'rgb(180,180,180)';
 		if(!$(this).find('input').prop('checked')) {
 			color = 'rgb(100,100,100)';	
 		} 
 		$(this).closest('.alarm').css('background-color',color);
 		e.stopPropagation();
-	});
-	setInterval(checkClock,1000);
-
 }
 
 //Sets off an alarm when 
