@@ -11,17 +11,13 @@
 }
 
 #countBox {
-  position: relative;
-  left:0px;
-  bottom: 10px;
+  height: 40px;
   text-align: center;
 }
 
 #exit {
   position: relative;
   top:10;
-
-  text-align: center;
   vertical-align: middle;
   padding: 10px;
   font-size: 100%;
@@ -50,25 +46,19 @@
 }
 
 .addAlarmButtonText {
-  text-align: center;
   vertical-align: middle;
   padding-top: 20px;
   font-size: 150%;
   letter-spacing: 5px;
-  color: rgb(255,255,255);
 
-  font-family: sans-serif;
 }
 
 .practiceButtonText {
-  text-align: center;
   vertical-align: middle;
   padding-top: 20px;
   font-size: 150%;
   letter-spacing: 5px;
-  color: rgb(255,255,255);
 
-  font-family: sans-serif;
 }
 
 .alarm {
@@ -82,23 +72,20 @@
 
 .bigButton {
   height: 10%;
-  background-color: rgb(100,100,100);
+  background-color: rgb(60,60,60);
 }
 
 .buttonText {
-  text-align: center;
   vertical-align: middle;
   padding: 0 0;
   font-size: 150%;
   letter-spacing: 5px;
-  color: rgb(255,255,255);
 
-  font-family: sans-serif;
 }
 
 .choice {
   float:left;
-  background-color: rgb(100,100,100);
+  background-color: rgb(140,140,140);
   height:10%;
   width:40%;
   margin: 5%;
@@ -110,7 +97,7 @@
 
 .count {
   display: inline-block;
-  margin: 20px 5px;
+  margin: 0px 5px;
   height: 40px;
   width: 40px;
   background-color: red;
@@ -129,19 +116,7 @@
   height:10%;
   font-size: 100%;
   letter-spacing: 5px;
-  color: rgb(255,255,255);
 
-  font-family: sans-serif; 
-}
-
-.dot {
-  position:absolute;
-  margin:5px;
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
 }
 
 .indentBlock {
@@ -174,9 +149,7 @@
   left:10%;
   font-size: 125%;
   letter-spacing: 3px;
-  color: rgb(255,255,255);
 
-  font-family: sans-serif;
 }
 
 .exitText {
@@ -189,11 +162,9 @@
   letter-spacing: 3px;
   color: rgb(70,70,70);
 
-  font-family: sans-serif;
 }
 
 .nameText {
-  text-align: center;
   padding-top: 2%;
 
   float: left;
@@ -201,23 +172,19 @@
   height:10%;
   font-size: 100%;
   letter-spacing: 5px;
-  color: rgb(255,255,255);
-
   overflow: hidden;
-  font-family: sans-serif;
+  text-align: center;
+
 }
 
 .sne {
   height: 10%;
-  background-color: rgb(100,100,100);
+  background-color: rgb(60,60,60);
   width: 100%;
-
-  text-align: center;
   padding: 1% 0;
   font-size: 30px;
   letter-spacing: 5px;
   color: rgb(255,255,255);
-  font-family: sans-serif;
 }
 
 .timeText {
@@ -230,9 +197,6 @@
   left:10%;
   font-size: 175%;
   letter-spacing: 5px;
-  color: rgb(255,255,255);
-
-  font-family: sans-serif;
 }
 
 #fbBut{
@@ -240,8 +204,23 @@
   text-align: center;
 }
 
-.p{
+p{
+  color: rgb(255,255,255);
+  font-family: sans-serif;
   text-align: center;
+}
+
+span {
+  color: rgb(255,255,255);
+  font-family: sans-serif;
+}
+
+h2 {
+  top:50px;
+  color: rgb(255,255,255);
+  text-align: center;
+  font-family: sans-serif;
+  letter-spacing: 5px;
 }
 
 h4 {
@@ -261,6 +240,8 @@ a {
 }
 
 div {
+    font-family: sans-serif;
+    overflow: hidden;
     width: 100%;
 }
 

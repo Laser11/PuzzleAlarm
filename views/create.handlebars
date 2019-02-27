@@ -8,18 +8,28 @@
 	<script type="text/javascript" src="/js/ready.js"></script>
 	<script type="text/javascript">
 		function deleteClock() {
+			window.location.href = "/remove?name={{clocks.name}}";
+		}
+		function cancelClock() {
 			window.location.href = "/index";
 		}
 	</script>
 </head>
 <body>
 	<form action="/create/add">
-		<input class="sne" type="button" value="Cancel" onclick="deleteClock()">
+		{{#if editing}}
+			<input class="sne" type="button" value="Delete" onclick="deleteClock()">
+		{{else}}
+			<input class="sne" type="button" value="Cancel" onclick="cancelClock()">
+		{{/if}}
+		<!--On/Off switch-->
 		<br><input type="radio" name="online" value="true" checked>ON <input type="radio" name="online" value="false" {{#if clocks.online}}{{else}}checked{{/if}}>OFF
+
+		<!--Input name and time-->
 		<br>Name: <input type="text" id="clkname" name="clkname" value="{{clocks.name}}">
 		<br>Time: <input type="time" id="clktime" name="clktime" value="{{clocks.rawTime}}">
-		<!--div>Ongoing? <input type="radio" name="ongoing" value="" checked>Yes <input type="radio" name="ongoing" value="checked" {{clocks.singleUse}}>No </div-->
-
+		
+		<!--Input day of week-->
 		<div class="indentBlock">
 			<input type="checkbox" class="reqBox" name="monChoice" value="checked" {{clocks.week.monCheck}}>Mon
 			<input type="checkbox" class="reqBox" name="tueChoice" value="checked" {{clocks.week.tuesCheck}}>Tue
@@ -37,7 +47,7 @@
 			<br><input type="checkbox" class="reqBox1" name="memChoice" value="checked" {{clocks.puzzles.memoryCheck}}>Memory
 			
 			</div>
-		<!--p>End date: <input type="date" name=enddate value="{{date}}"></p-->
+
 		Alarm Sound:
 			<div class="indentBlock">
 				<select name="musChoice">

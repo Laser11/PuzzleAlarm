@@ -16,7 +16,7 @@ $(document).ready(function() {
 function initializePage() {
 	setTimeout(function() {
 		$('#exit').css('visibility','visible');
-	},60000)
+	},60000);
 	$(".choice").click(checkAnswer);
 	//Get the first question
 	$.get('/json/puzzles',loadQuestion);
@@ -52,9 +52,7 @@ function checkAnswer(e) {
 
 //Used to fill space
 function loadQuestion(result) {
-	var htmlData = result['question'] + 
-	'<span id="solution" style="visibility:hidden">' + result['solution'] +
-	'</span>';
+	var htmlData = result['question'];
 
 	solution = result['solution'];
 

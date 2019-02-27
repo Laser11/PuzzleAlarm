@@ -20,7 +20,7 @@ exports.view = function(req, res){
       if (isNaN(songID)) songID = 0;
 
       songs[songID].isChecked = "selected";
-  		res.render('create', {"clocks" : clocks.alarms[i], "songs" : songs});
+  		res.render('create', {"clocks" : clocks.alarms[i], "songs" : songs, editing: true});
   		return;
   	}
     
@@ -60,6 +60,6 @@ exports.view = function(req, res){
         }
 
     };
-  res.render('create', {"clocks" : defaultClock, "songs" : songs});
+  res.render('create', {"clocks" : defaultClock, "songs" : songs, editing: false});
   
 };

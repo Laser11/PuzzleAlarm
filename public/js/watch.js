@@ -20,7 +20,15 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	$('.alarm').click(function(e) {
+		var name = $(this).find('.theName').text();
+		window.location.href = "/create?name=" + name;
+	})
+	$('.switch').click(function(e) {
+		e.stopPropagation();
+	})
 	setInterval(checkClock,1000);
+
 }
 
 //Sets off an alarm when 

@@ -36,7 +36,7 @@ function isReady() {
 	
 	if(!stayDisabled && !stayDisabled1 && $('#clkname').val() != null && $('#clkname').val().trim() != ''
 		&& $('#clktime').val() != null && $('#clktime').val().trim() != '' ) {
-		$('#submit').css('background-color','rgb(80,80,80)')
+		$('#submit').css('background-color','rgb(50,50,50)')
 	}
 	else {
 		$('#submit').css('background-color','rgb(150,150,150)')
