@@ -58,23 +58,13 @@ function updateColors1(e) {
 		var name = $(this).closest('.nameText').text().trim();
 		//Turn on
 		if(!$(this).find('input').prop('checked')) {
-<<<<<<< HEAD
 			color = 'rgb(54,38,167)';	
-			$.get('/json/clocks/'+name+'/true');
-		} 
-		//Turn off
-		else {
-			var color = 'rgb(101,126,212)';
-			$.get('/json/clocks/'+name+'/false');
-=======
-			color = 'rgb(100,100,100)';	
 			$.post('/json/clocks/'+name+'/true');
 		} 
 		//Turn off
 		else {
-			var color = 'rgb(180,180,180)';
+			var color = 'rgb(101,126,212)';
 			$.post('/json/clocks/'+name+'/false');
->>>>>>> 236766150bb7b049bf7b610d99ec3084108bd045
 		}
 		$(this).closest('.alarm').css('background-color',color);
 		

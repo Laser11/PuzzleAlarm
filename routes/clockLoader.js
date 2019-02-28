@@ -20,7 +20,7 @@ exports.switchClock = function(req, res) { 
 
 	var clock = getClock(name);
 	clock['online'] = (req.params.isOn == 'true')
-	return;
+	res.send(clock);
 }
 
 function getClock(name) {

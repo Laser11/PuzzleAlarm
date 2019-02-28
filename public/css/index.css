@@ -182,7 +182,7 @@
   height:30%;
   font-size: 100%;
   letter-spacing: 5px;
-  overflow: hidden;
+  overflow: visible;
   text-align: center;
 
 }
