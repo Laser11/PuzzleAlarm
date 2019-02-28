@@ -50,6 +50,10 @@ function updateColors() {
 }
 //Updates the color upon flipping the switch
 function updateColors1(e) {
+		e.stopPropagation();
+
+		if (e.target.className == 'slider round') return;
+
 		//Get name
 		var name = $(this).closest('.nameText').text().trim();
 		//Turn on
@@ -63,7 +67,8 @@ function updateColors1(e) {
 			$.get('/json/clocks/'+name+'/false');
 		}
 		$(this).closest('.alarm').css('background-color',color);
-		e.stopPropagation();
+		
+
 }
 
 //Sets off an alarm when 
