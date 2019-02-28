@@ -1,17 +1,11 @@
 <html>
 <head>
-	<title>Alarm Clock</title>
-	<meta name="viewport" content="width=device-width, initial-scale:1.0">
-	<link rel="stylesheet" href="/css/index.css">
-	<meta charset="utf-8">
-	
-	<script src="/js/jquery-1.11.0.js"></script>
+	{{>formatting}}
+
+	<link rel="stylesheet" href="/css/slider.css">
+
 	<script src="/js/watch.js"></script>
-	<script type="text/javascript">
-		function editClock(name) {
-			window.location.href = "/create?name=" + name;
-		}
-	</script>
+
 </head>
 <body>
 	<div class="container">
@@ -19,13 +13,23 @@
 		<div id="alarmsBox">
 			{{#each alarms}}
 			<div style="margin: 2px 0px;float:left;">
-				<div class="alarm" onclick="editClock('{{name}}')" id="{{name}}">
+				<div class="alarm" id="{{name}}">
 						<div class="nameText"><span class="theName">{{name}}</span>
-							<a href="/remove?name={{name}}"><div class="exitText">X</div></a>
+							<label class="switch">
+								{{#if online}}
+									<input type="checkbox" autocomplete="off">
+								{{else}}
+									<input type="checkbox" autocomplete="off" checked>
+								{{/if}}
+								<span class="slider round"></span>
+							</label>
 						</div>
-						<div class="timeText"><span class="timeSpan">{{time}}</span><span class="enableText"style="visibility:hidden">{{online}}</span><span class="songText"style="visibility:hidden">{{song}}</span></div>
+						<div class="timeText">
+							<span class="timeSpan">{{time}}</span>
+							<span class="songText"style="visibility:hidden">{{song}}</span>
+						</div>
 						
-						<div class="daysText">{{week.text}}</div>
+						<div class="daysText"><span>{{week.text}}</span></div>
 						
 				</div>
 				<!--a href="#" class="on"><div><p class="timeText">ON</p></div></a-->

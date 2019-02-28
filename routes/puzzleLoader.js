@@ -1,8 +1,8 @@
 var data = require('../puzzles.json');
 
 exports.puzzleInfo = function(req, res) { 
-	var nextVal;
-	var i = 1;
+	//var nextVal;
+	//var i = 1;
 	/*
 	while(i < data.puzzles.length + 1) {
 		nextVal = Math.floor(Math.random() * data.puzzles.length) + 1;

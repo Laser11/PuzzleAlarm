@@ -18,7 +18,8 @@ var remove = require('./routes/remove');
 
 var help = require('./routes/help');
 var puzzle = require('./routes/puzzle');
-var music = require('./routes/music');
+
+var clockLoader = require('./routes/clockLoader');
 var puzzleLoader = require('./routes/puzzleLoader');
 
 // Example route
@@ -56,16 +57,15 @@ app.get('/help',help.view);
 app.get('/puzzle',puzzle.view);
 app.get('/puzzle/:songID', puzzle.viewAlt);
 
-//app.get('/music/:songpath', music.loadMusic)
 app.get('/music/:songpath', (req,res) => {
 	songPath = __dirname + '/soundFiles/' + req.params.songpath
 	res.setHeader("Content-Type", "audio/mpeg");
 	fs.createReadStream(songPath).pipe(res);
 });
 app.get('/json/puzzles',puzzleLoader.puzzleInfo);
-
-//app.get('/', loginPage.view);
-
+app.get('/json/clocks',clockLoader.clockInfoAll);
+app.get('/json/clocks/:clockname',clockLoader.clockInfo);
+app.get('/json/clocks/:clockname/:isOn',clockLoader.switchClock);
 
 // Example route
 // app.get('/users', user.list);

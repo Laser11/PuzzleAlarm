@@ -14,12 +14,36 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	//Set listeners
 	setTimeout(function() {
 		$('#exit').css('visibility','visible');
-	},60000)
+	},60000);
 	$(".choice").click(checkAnswer);
+	$("#snooze").click(snoozeSong);
 	//Get the first question
 	$.get('/json/puzzles',loadQuestion);
+
+	//Set audio
+	var audio = $("#musicPlayer").get(0);
+	audio.src = "";
+	audio.src = "/music/" + $("#musicPlayer").html();
+
+	audio.load();
+	try {
+		audio.play();
+	}
+	catch(e) {
+		console.log(e.message);
+	}
+}
+
+//Mutes the music for 10 seconds
+function snoozeSong(e) {
+	$("#musicPlayer").prop("muted",true);
+
+	setTimeout(function() {
+		$("#musicPlayer").prop("muted",false);
+	},10000);
 }
 
 //Sets off an alarm when 
@@ -52,9 +76,7 @@ function checkAnswer(e) {
 
 //Used to fill space
 function loadQuestion(result) {
-	var htmlData = result['question'] + 
-	'<span id="solution" style="visibility:hidden">' + result['solution'] +
-	'</span>';
+	var htmlData = result['question'];
 
 	solution = result['solution'];
 

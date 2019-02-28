@@ -1,10 +1,8 @@
 <html>
 <head>
-	<title>Solve the Puzzle</title>
-	<meta name="viewport" content="width=device-width, initial-scale:1.0">
-	<link rel="stylesheet" href="/css/index.css">
+	{{>formatting}}
 
-	<script type="text/javascript" src="/js/jquery-1.11.0.js"></script>
+	
 	<script type="text/javascript" src="/js/player.js"></script>
 	<script type="text/javascript">
 		function exitPuzzle() {
@@ -13,16 +11,13 @@
 	</script>
 </head>
 <body>
-	<audio id="musicPlayer"  autoplay loop>
-  		<source src="/music/{{songPath}}" type="audio/mpeg">
-  		Audio file not compatible.
-	</audio>
-
+	<audio id="musicPlayer"  loop>{{songPath}}</audio>
+	<!--iframe src="/music/{{songPath}}" allow="autoplay" style="display:none;"></iframe-->
 	<div class="container">
 		<div id="questionBox">
 			<span id="exit" onclick="exitPuzzle()" style="visibility:{{visible}}">EXIT</span>
 
-			<p id="question" class="buttonText"><span id="solution" style="visibility:hidden"></span></p>
+			<p id="question" class="buttonText"></p>
 			
 			<div id="choiceBox">
 				<div class="choice" id="a">
@@ -34,12 +29,13 @@
 				<div class="choice" id="d">
 					<p class="buttonText"></p></div>
 			</div>
-			<p class="buttonText" id="ans_output"></p>
 			<div id="countBox">
 				<div id="count1" class="count"></div>
 				<div id="count2" class="count"></div>
 				<div id="count3" class="count"></div>
 			</div>
+			<h2 id="ans_output"></h2>
+			<div style="background-color: rgb(10,10,10);"class="bigButton" id="snooze"><p class="addAlarmButtonText">Snooze</p></div>
 		</div>
 	</div>
 </body>

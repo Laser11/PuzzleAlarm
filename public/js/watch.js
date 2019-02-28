@@ -20,7 +20,55 @@ $(document).ready(function() {
  * Function that is called when the document is ready.
  */
 function initializePage() {
+	//Alarm editing
+	$('.alarm').click(function(e) {
+		e.preventDefault();
+		var name = $(this).find('.nameText').text().trim();
+		var online = !(jQuery(this).find(".switch input").prop('checked'))
+		window.location.replace("/create?name=" + name);
+		
+	});
+	//On/off slide
+	$('.switch').each(updateColors);
+	$('.switch').click(updateColors1);
 	setInterval(checkClock,1000);
+
+}
+
+//Updates the color upon page initiation
+function updateColors() {
+		//Turn on
+		if(!$(this).find('input').prop('checked')) {
+			color = 'rgb(100,100,100)';	
+		} 
+		//Turn off
+		else {
+			var color = 'rgb(180,180,180)';
+		}
+		$(this).closest('.alarm').css('background-color',color);
+		
+}
+//Updates the color upon flipping the switch
+function updateColors1(e) {
+		e.stopPropagation();
+
+		if (e.target.className == 'slider round') return;
+
+		//Get name
+		var name = $(this).closest('.nameText').text().trim();
+		//Turn on
+		if(!$(this).find('input').prop('checked')) {
+			color = 'rgb(100,100,100)';	
+			$.get('/json/clocks/'+name+'/true');
+		} 
+		//Turn off
+		else {
+			var color = 'rgb(180,180,180)';
+			$.get('/json/clocks/'+name+'/false');
+		}
+		$(this).closest('.alarm').css('background-color',color);
+		
+
 }
 
 //Sets off an alarm when 
@@ -38,9 +86,10 @@ function checkClock() {
 	$(".alarm").each(function(index) {
 		var clockName = jQuery(this).find(".nameText .theName").text();
 		var clockTime = jQuery(this).find(".timeText .timeSpan").text();
-		var isEnabled = jQuery(this).find(".timeText .enableText").text();
+		var isEnabled = !(jQuery(this).find(".switch input").prop('checked'));
 		var clockDays = jQuery(this).find(".daysText").text().split(' ');
 		
+
 
 		var isDay = clockDays.some(function(elem) {
 			return elem == weekday[today];
@@ -48,7 +97,7 @@ function checkClock() {
 
 		if (clockTime == time &&
 			isDay &&
-			isEnabled == "ON")
+			isEnabled)
 		{
 
 			var id = jQuery(this).find(".songText").html()
