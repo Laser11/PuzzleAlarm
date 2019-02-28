@@ -54,8 +54,10 @@ app.post('/create/add', add.addClock);
 app.get('/remove', remove.removeClock);
 app.get('/help',help.view);
 
-app.get('/puzzle',puzzle.view);
-app.get('/puzzle/:songID', puzzle.viewAlt);
+app.get('/puzzle_A',puzzle.viewA);
+app.get('/puzzle_B',puzzle.viewB);
+app.get('/puzzle_A/:songID', puzzle.viewAltA);
+app.get('/puzzle_B/:songID', puzzle.viewAltB);
 
 app.get('/music/:songpath', (req,res) => {
 	songPath = __dirname + '/soundFiles/' + req.params.songpath

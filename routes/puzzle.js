@@ -1,10 +1,22 @@
 var puzzleData = require('../puzzles.json');
 var musicData = require('../music.json');
 var clocks = require('../clocks.json');
+
+
+
+
+
 /*
  * GET puzzle page and alarm
  */
- exports.viewAlt = function(req, res){
+ exports.viewAltA = function(req, res){
+  renderPuzzleFromClock(req,res,true);
+ }
+
+ exports.viewAltB = function(req, res){
+  renderPuzzleFromClock(req,res,false);
+ }
+function renderPuzzleFromClock(req,res,snoozeON) {
   var name = req.query.name;
   //Searches the json for the clock with the name
   for (var i=0; i<clocks.alarms.length; i++) {
@@ -16,18 +28,22 @@ var clocks = require('../clocks.json');
   }
 
   //Render the puzzle page
-  renderPuzzle(req,res,"hidden",true);
+  renderPuzzle(req,res,"hidden",true,snoozeON);
 };
 
 // GET puzzle page without alarm
-exports.view = function(req, res){
-
-
+exports.viewA = function(req, res){
   //Render the puzzle page
-  renderPuzzle(req,res,"visible",false);
+  renderPuzzle(req,res,"visible",false,true);
 };
 
-function renderPuzzle(req,res,visible,wantSong) {
+// GET puzzle page without alarm
+exports.viewB = function(req, res){
+  //Render the puzzle page
+  renderPuzzle(req,res,"visible",false,false);
+};
+
+function renderPuzzle(req,res,exitVisible,wantSong,snoozeON) {
 
 
   //Get the song
@@ -39,6 +55,6 @@ function renderPuzzle(req,res,visible,wantSong) {
     songPath = songJSON.path;
   }
   
-  res.render('puzzle', {"visible": visible, "songPath" : songPath});
+  res.render('puzzle', {"visible": exitVisible, "songPath" : songPath, "snoozeON" : snoozeON});
   
 }
