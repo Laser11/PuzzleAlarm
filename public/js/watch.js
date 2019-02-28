@@ -59,12 +59,12 @@ function updateColors1(e) {
 		//Turn on
 		if(!$(this).find('input').prop('checked')) {
 			color = 'rgb(100,100,100)';	
-			$.get('/json/clocks/'+name+'/true');
+			$.post('/json/clocks/'+name+'/true');
 		} 
 		//Turn off
 		else {
 			var color = 'rgb(180,180,180)';
-			$.get('/json/clocks/'+name+'/false');
+			$.post('/json/clocks/'+name+'/false');
 		}
 		$(this).closest('.alarm').css('background-color',color);
 		

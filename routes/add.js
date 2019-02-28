@@ -6,13 +6,13 @@ function translateWeek(request) {
 	var weekString = "";
 
 	//Parse through each day choice. Append to weekstring
-	if (request.query.monChoice == "checked") weekString += "M ";
-	if (request.query.tueChoice == "checked") weekString += "Tu ";
-	if (request.query.wedChoice == "checked") weekString += "W ";
-	if (request.query.thuChoice == "checked") weekString += "Th ";
-	if (request.query.friChoice == "checked") weekString += "F ";
-	if (request.query.satChoice == "checked") weekString += "Sa ";
-	if (request.query.sunChoice == "checked") weekString += "Su ";
+	if (request.body.monChoice == "checked") weekString += "M ";
+	if (request.body.tueChoice == "checked") weekString += "Tu ";
+	if (request.body.wedChoice == "checked") weekString += "W ";
+	if (request.body.thuChoice == "checked") weekString += "Th ";
+	if (request.body.friChoice == "checked") weekString += "F ";
+	if (request.body.satChoice == "checked") weekString += "Sa ";
+	if (request.body.sunChoice == "checked") weekString += "Su ";
 
 	return weekString;
 }
@@ -24,7 +24,7 @@ function translateDifficulty(request) {
 		medCheck : "",
 		hardCheck: ""
 	};
-	diffJSON.choice = request.query.diff;
+	diffJSON.choice = request.body.diff;
 	switch(diffJSON.choice) {
 		case "med":
 			diffJSON.medCheck = "checked";
@@ -54,35 +54,37 @@ function to12(time24) {
 exports.addClock = function(request, response) {    
 	//Map query onto the json object
 	var newdata = {
-		name : request.query.clkname,
-		rawTime : request.query.clktime,
-		time: to12(request.query.clktime),
-		date : request.query.date,
-		song : request.query.musChoice,
+		name : request.body.clkname,
+		rawTime : request.body.clktime,
+		time: to12(request.body.clktime),
+		date : request.body.date,
+		song : request.body.musChoice,
 		online : true,
 
 
-		singleUse: request.query.ongoing,
+		singleUse: request.body.ongoing,
 		
 		week : {
-            monCheck 	: request.query.monChoice,
-            tuesCheck 	: request.query.tueChoice,
-            wedCheck 	: request.query.wedChoice,
-            thursCheck 	: request.query.thuChoice,
-            friCheck 	: request.query.friChoice,
-            satCheck 	: request.query.satChoice,
-            sunCheck 	: request.query.sunChoice,
+            monCheck 	: request.body.monChoice,
+            tuesCheck 	: request.body.tueChoice,
+            wedCheck 	: request.body.wedChoice,
+            thursCheck 	: request.body.thuChoice,
+            friCheck 	: request.body.friChoice,
+            satCheck 	: request.body.satChoice,
+            sunCheck 	: request.body.sunChoice,
             text : translateWeek(request)
         },
 
         puzzles : {
-            triviaCheck : request.query.trivChoice,
-            mathCheck 	: request.query.mathChoice,
-            memoryCheck : request.query.memChoice
+            triviaCheck : request.body.trivChoice,
+            mathCheck 	: request.body.mathChoice,
+            memoryCheck : request.body.memChoice
         },
 
         difficulty : translateDifficulty(request)
 	}
+
+	console.log(newdata);
 	
 	name = newdata.name;
 	//console.log(newdata);
@@ -92,7 +94,6 @@ exports.addClock = function(request, response) { 
 	  	if (clocks.alarms[i].name == name) {
 	  		newdata.online = clocks.alarms[i].online;
 	  		clocks.alarms[i] = newdata;
-	  		console.log(newdata.online)
 	  		response.render('index', clocks);
 	  		return;
 	  	}

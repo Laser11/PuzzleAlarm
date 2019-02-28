@@ -50,7 +50,7 @@ if ('development' == app.get('env')) {
 app.get('/', login.view);
 app.get('/index', index.view);
 app.get('/create', create.view);
-app.get('/create/add', add.addClock);
+app.post('/create/add', add.addClock);
 app.get('/remove', remove.removeClock);
 app.get('/help',help.view);
 
@@ -65,7 +65,7 @@ app.get('/music/:songpath', (req,res) => {
 app.get('/json/puzzles',puzzleLoader.puzzleInfo);
 app.get('/json/clocks',clockLoader.clockInfoAll);
 app.get('/json/clocks/:clockname',clockLoader.clockInfo);
-app.get('/json/clocks/:clockname/:isOn',clockLoader.switchClock);
+app.post('/json/clocks/:clockname/:isOn',clockLoader.switchClock);
 
 // Example route
 // app.get('/users', user.list);
