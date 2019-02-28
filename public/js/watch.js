@@ -101,7 +101,7 @@ function checkClock() {
 		{
 
 			var id = jQuery(this).find(".songText").html()
-			window.location.href = "/puzzle/" + id + "?name=" + clockName;
+			window.location.href = "/puzzle_A/" + id + "?name=" + clockName;
 			
 		}	
 	});
