@@ -9,10 +9,8 @@ var clocks = require('../clocks.json');
   //Searches the json for the clock with the name
   for (var i=0; i<clocks.alarms.length; i++) {
     //Disables the clock
-      console.log(name);
     if (clocks.alarms[i].name == name) {
       clocks.alarms[i].online = false;
-      console.log(clocks.alarms[i].online);
     }
     
   }
