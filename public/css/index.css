@@ -47,7 +47,6 @@
 
 .addAlarmButtonText {
   vertical-align: middle;
-  padding-top: 20px;
   font-size: 150%;
   letter-spacing: 5px;
 
@@ -71,7 +70,7 @@
 }
 
 .bigButton {
-  height: 10%;
+  height: 76px;
   background-color: rgb(60,60,60);
 }
 
@@ -88,6 +87,7 @@
   height:10%;
   width:40%;
   margin: 5%;
+  background-color: rgb(100,100,100);
 }
 
 .choice .buttonText {

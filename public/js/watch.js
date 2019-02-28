@@ -22,9 +22,11 @@ $(document).ready(function() {
 function initializePage() {
 	//Alarm editing
 	$('.alarm').click(function(e) {
-		var name = $(this).find('.theName').text();
+		e.preventDefault();
+		var name = $(this).find('.nameText').text().trim();
 		var online = !(jQuery(this).find(".switch input").prop('checked'))
-		window.location.href = "/create?name=" + name + "&online=" + online;
+		window.location.replace("/create?name=" + name);
+		
 	});
 	//On/off slide
 	$('.switch').each(updateColors);
@@ -33,20 +35,33 @@ function initializePage() {
 
 }
 
+//Updates the color upon page initiation
 function updateColors() {
-		var color = 'rgb(180,180,180)';
+		//Turn on
 		if(!$(this).find('input').prop('checked')) {
 			color = 'rgb(100,100,100)';	
 		} 
+		//Turn off
+		else {
+			var color = 'rgb(180,180,180)';
+		}
 		$(this).closest('.alarm').css('background-color',color);
 		
 }
-
+//Updates the color upon flipping the switch
 function updateColors1(e) {
-		var color = 'rgb(180,180,180)';
+		//Get name
+		var name = $(this).closest('.nameText').text().trim();
+		//Turn on
 		if(!$(this).find('input').prop('checked')) {
 			color = 'rgb(100,100,100)';	
+			$.get('/json/clocks/'+name+'/true');
 		} 
+		//Turn off
+		else {
+			var color = 'rgb(180,180,180)';
+			$.get('/json/clocks/'+name+'/false');
+		}
 		$(this).closest('.alarm').css('background-color',color);
 		e.stopPropagation();
 }
@@ -69,6 +84,7 @@ function checkClock() {
 		var isEnabled = !(jQuery(this).find(".switch input").prop('checked'));
 		var clockDays = jQuery(this).find(".daysText").text().split(' ');
 		
+
 
 		var isDay = clockDays.some(function(elem) {
 			return elem == weekday[today];
