@@ -37,13 +37,21 @@
   bottom: 15vw;
 }
 
+#loggingIn {
+  padding-left: 20%;
+  position: absolute;
+  margin-top: 96%;
+  width: 92%;
+}
+
 #questionBox {
   height:100%;
   background-color: rgb(80,80,80);
 }
 
 .addAlarmButtonText {
-  text-align: center;
+
+  padding-right: 16%;
   vertical-align: middle;
   padding-top: 20px;
   font-size: 150%;
@@ -51,6 +59,12 @@
   color: rgb(255,255,255);
 
   font-family: sans-serif;
+
+
+  height: 10%;
+  background-color: rgb(255,51,31);
+  border-radius: 15px;
+  vertical-align: bottom;
 }
 
 .practiceButtonText {
@@ -73,7 +87,13 @@
 
 .bigButton {
   height: 10%;
-  background-color: rgb(100,100,100);
+  background-color: rgb(255,51,31);
+  border-radius: 15px;
+  height: 76px;
+  background-color: rgb(255,51,31);
+  position: fixed;
+  bottom: 5;
+  right: 1;
 }
 
 .buttonText {
@@ -230,14 +250,18 @@ div {
 }
 
 body {
-  background-color: rgb(200,200,200);
+  background-color: rgb(251,251,255);
+}
+
+.container {
+  background-color: rgb(251,251,255);
 }
 
 form {
   font-size: 150%;
   line-height: 150%;
   letter-spacing: 2px;
-  color: rgb(5,5,5);
+  color: rgb(13,1,6);
 
   font-family: sans-serif; 
 }

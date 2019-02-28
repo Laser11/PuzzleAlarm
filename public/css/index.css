@@ -75,6 +75,8 @@
 }
 
 .bigButton {
+  width: 92%;
+  padding-right: 8%;
   height: 10%;
   background-color: rgb(255,51,31);
   border-radius: 15px;
