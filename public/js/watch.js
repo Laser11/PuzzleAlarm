@@ -39,11 +39,11 @@ function initializePage() {
 function updateColors() {
 		//Turn on
 		if(!$(this).find('input').prop('checked')) {
-			color = 'rgb(100,100,100)';	
+			color = 'rgb(54,38,167)';	
 		} 
 		//Turn off
 		else {
-			var color = 'rgb(180,180,180)';
+			var color = 'rgb(101,126,212)';
 		}
 		$(this).closest('.alarm').css('background-color',color);
 		
@@ -58,12 +58,12 @@ function updateColors1(e) {
 		var name = $(this).closest('.nameText').text().trim();
 		//Turn on
 		if(!$(this).find('input').prop('checked')) {
-			color = 'rgb(100,100,100)';	
+			color = 'rgb(54,38,167)';	
 			$.get('/json/clocks/'+name+'/true');
 		} 
 		//Turn off
 		else {
-			var color = 'rgb(180,180,180)';
+			var color = 'rgb(101,126,212)';
 			$.get('/json/clocks/'+name+'/false');
 		}
 		$(this).closest('.alarm').css('background-color',color);

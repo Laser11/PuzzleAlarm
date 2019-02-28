@@ -6,6 +6,7 @@
   height: 34px;
   float:right;
   right:10px;
+
 }
 
 /* Hide default HTML checkbox */
@@ -13,6 +14,7 @@
   opacity: 0;
   width: 0;
   height: 0;
+
 }
 
 /* The slider */
@@ -41,7 +43,7 @@
 }
 
 input:checked + .slider {
-  background-color: rgb(200,0,000);
+  background-color: rgb(255,51,31);
 }
 
 input:focus + .slider {

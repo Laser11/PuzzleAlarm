@@ -45,10 +45,17 @@
   background-color: rgb(80,80,80);
 }
 
+#sumbitSave {
+  background-color: rgb(54,38,167);
+  position: fixed;
+  bottom: 0%;
+}
+
 .addAlarmButtonText {
   vertical-align: middle;
   font-size: 150%;
   letter-spacing: 5px;
+  color: rgb(251,251,255);
 
 }
 
@@ -72,7 +79,12 @@
   background-color: rgb(255,51,31);
   border-radius: 15px;
   height: 76px;
-  background-color: rgb(60,60,60);
+  background-color: rgb(255,51,31);
+  position: fixed;
+  bottom: 5;
+  right: 1;
+
+
 }
 
 .buttonText {
@@ -177,12 +189,38 @@
 
 .sne {
   height: 10%;
-  background-color: rgb(60,60,60);
+  
   width: 100%;
   padding: 1% 0;
   font-size: 30px;
   letter-spacing: 5px;
   color: rgb(255,255,255);
+  border-radius: 15px;
+}
+
+.sneSave {
+  height: 10%;
+  background-color: rgb(54,38,167);
+  width: 100%;
+  padding: 1% 0;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+  border-radius: 15px;
+  position: fixed;
+  bottom: 5;
+  right: 1;
+}
+
+.sneDel {
+  height: 10%;
+  background-color: rgb(255,51,31);
+  width: 100%;
+  padding: 1% 0;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+  border-radius: 15px;
 }
 
 .timeText {
@@ -202,7 +240,7 @@
 }
 
 p{
-  color: rgb(255,255,255);
+  color: rgb(13,1,6);
   font-family: sans-serif;
   text-align: center;
 }
