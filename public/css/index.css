@@ -1,20 +1,13 @@
 #alarmsBox {
-  height: 85%;
+  height: 75%;
   overflow-y: scroll;
   overflow-x: hidden;
-
+  border-radius: 10px;
 }
 
 #cancel {
   
   bottom: 0px;
-}
-
-#countBox {
-  position: fixed;
-  left:0px;
-  bottom: 10px;
-  text-align: center;
 }
 
 #exit {
@@ -73,16 +66,15 @@
 
 .alarm {
   width: 100%;
-  height: intrinsic;
-  height: -moz-max-content;
-  height: -webkit-fit-content;
+  height: 20%;
   float: left;
-  background-color: rgb(140,140,140);
+  background-color: rgb(54,38,167);
 }
 
 .bigButton {
   height: 10%;
-  background-color: rgb(100,100,100);
+  background-color: rgb(255,51,31);
+  border-radius: 15px;
 }
 
 .buttonText {
@@ -101,32 +93,20 @@
   background-color: rgb(100,100,100);
   height:10%;
   width:40%;
-  margin: 5%;
-}
-
-.choice .buttonText {
-  margin: 0px;
+  margin:4%;
 }
 
 .count {
-  display: inline-block;
-  margin: 20px 5px;
+  float:left;
+  margin: 10px;
   height: 40px;
   width: 40px;
-  background-color: red;
-}
-
-@media screen and (max-width: 600px) {
-  .choice {
-    width: 100%;
-    margin: 3% 0;
-  }
 }
 
 .dateText {
   float:right;
   width:50%;
-  height:10%;
+  height:70%;
   font-size: 100%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
@@ -155,29 +135,16 @@
 }
 
 .daysText {
-  width: 35%;
+  width: 27%;
   padding-left: 10%; 
   padding-top: 1%;
   vertical-align: middle;
   float: left;
-  height:10%;
+  height:70%;
   left:10%;
-  font-size: 125%;
+  font-size: 100%;
   letter-spacing: 3px;
   color: rgb(255,255,255);
-
-  font-family: sans-serif;
-}
-
-.exitText {
-  padding-right: 5%; 
-  padding-top: 0%;
-  width: 20px;
-  vertical-align: middle;
-  float: right;
-  font-size: 200%;
-  letter-spacing: 3px;
-  color: rgb(70,70,70);
 
   font-family: sans-serif;
 }
@@ -188,7 +155,7 @@
 
   float: left;
   width:100%;
-  height:10%;
+  height:30%;
   font-size: 100%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
@@ -211,37 +178,19 @@
 }
 
 .timeText {
-  width: 40%;
   padding-left: 5%; 
   vertical-align: middle;
-  width: 50%;
+  width: 55%;
   float: left;
-  height:10%;
+  height:70%;
   left:10%;
-  font-size: 175%;
+  font-size: 145%;
   letter-spacing: 5px;
   color: rgb(255,255,255);
 
   font-family: sans-serif;
 }
 
-#fbBut{
-  position: absolute;
-  text-align: center;
-}
-
-.p{
-  text-align: center;
-}
-
-h4 {
-  position: absolute;
-  bottom: 5px;
-  right: 10px;
-}
-
-h3 {
-  left: 5px;
 
   text-align: center;
 }
@@ -255,7 +204,7 @@ div {
 }
 
 body {
-  background-color: rgb(200,200,200);
+  background-color: rgb(251,251,255);
 }
 
 form {
