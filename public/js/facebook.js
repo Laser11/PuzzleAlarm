@@ -39,7 +39,7 @@ function statusChangeCallback(response) {
 
 function changeUser(response) {
 	//$(".loginInfo").hide();
-  $("p").hide();
+  //$("p").hide();
   $("#fbBut").hide();
   $("#name").text(response.name);
   $("#photo").attr("src",response.picture.data.url);

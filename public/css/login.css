@@ -38,10 +38,10 @@
 }
 
 #loggingIn {
-  padding-left: 20%;
-  position: absolute;
-  margin-top: 96%;
-  width: 92%;
+    left: 4%;
+    position: absolute;
+    bottom: 2%;
+    width: 92%;
 }
 
 #questionBox {
@@ -50,9 +50,7 @@
 }
 
 .addAlarmButtonText {
-
-  padding-right: 16%;
-  vertical-align: middle;
+  text-align: center;
   padding-top: 20px;
   font-size: 150%;
   letter-spacing: 5px;
