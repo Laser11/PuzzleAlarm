@@ -29,12 +29,13 @@ function initializePage() {
 	audio.src = "/music/" + $("#musicPlayer").html();
 
 	audio.load();
-	try {
-		audio.play();
-	}
-	catch(e) {
-		console.log(e.message);
-	}
+
+	audio.play().catch(function() {
+		
+	});
+
+
+
 }
 
 //Mutes the music for 10 seconds
