@@ -70,7 +70,7 @@ function checkAnswer(e) {
 		$("#countTotal").text(count);
 		
 		//Load a new question
-		$.get('/json/puzzles'.text(),loadQuestion);
+		$.get('/json/puzzles',loadQuestion);
 	} else {
 		$('#ans_output').text("WRONG");
 	}
