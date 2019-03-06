@@ -23,6 +23,8 @@ exports.switchClock = function(req, res) { 
 	res.send(clock);
 }
 
+
+//Returns data of a clock
 function getClock(name) {
 	//Searches the json for the group with the name
 	for (var i=0; i< data.alarms.length; i++) {

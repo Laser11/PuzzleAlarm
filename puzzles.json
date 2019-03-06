@@ -2,7 +2,7 @@
   "puzzles" : [
     {
       "id" : "",
-      "type" : "trivia",
+      "type" : "memory",
       "question" : "When is Christmas?",
       "choice" : {
        "a" : "Feb 11",
@@ -14,7 +14,7 @@
    },
    {
     "id" : "",
-    "type" : "trivia",
+    "type" : "memory",
     "question" : "Who is the first president?",
     "choice" : {
      "a" : "George Washington",
@@ -26,8 +26,8 @@
  },
  {
   "id" : "",
-  "type" : "trivia",
-  "question" : "Which of the four has the largest population?",
+  "type" : "memory",
+  "question" : "Which has the most people?",
   "choice" : {
    "a" : "France",
    "b" : "Germany",

@@ -64,7 +64,8 @@ app.get('/music/:songpath', (req,res) => {
 	res.setHeader("Content-Type", "audio/mpeg");
 	fs.createReadStream(songPath).pipe(res);
 });
-app.get('/json/puzzles',puzzleLoader.puzzleInfo);
+app.get('/json/puzzles',puzzleLoader.puzzleInfoRand);
+app.get('/json/puzzles/:name',puzzleLoader.puzzleInfo);
 app.get('/json/clocks',clockLoader.clockInfoAll);
 app.get('/json/clocks/:clockname',clockLoader.clockInfo);
 app.post('/json/clocks/:clockname/:isOn',clockLoader.switchClock);

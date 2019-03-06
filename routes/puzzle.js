@@ -4,7 +4,7 @@ var clocks = require('../clocks.json');
 
 
 
-
+var clockName = '';
 
 /*
  * GET puzzle page and alarm
@@ -22,6 +22,7 @@ function renderPuzzleFromClock(req,res,snoozeON) {
   for (var i=0; i<clocks.alarms.length; i++) {
     //Disables the clock
     if (clocks.alarms[i].name == name) {
+      clockName = name;
       clocks.alarms[i].online = false;
     }
     
@@ -55,6 +56,6 @@ function renderPuzzle(req,res,exitVisible,wantSong,snoozeON) {
     songPath = songJSON.path;
   }
   
-  res.render('puzzle', {"visible": exitVisible, "songPath" : songPath, "snoozeON" : snoozeON});
+  res.render('puzzle', {"name" : clockName , "visible": exitVisible, "songPath" : songPath, "snoozeON" : snoozeON});
   
 }

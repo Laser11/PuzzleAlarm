@@ -21,7 +21,7 @@ function initializePage() {
 	$(".choice").click(checkAnswer);
 	$("#snooze").click(snoozeSong);
 	//Get the first question
-	$.get('/json/puzzles',loadQuestion);
+	$.get('/json/puzzles/'+ $('#clockName').text(),loadQuestion);
 
 	//Set audio
 	var audio = $("#musicPlayer").get(0);
@@ -41,7 +41,7 @@ function initializePage() {
 //Mutes the music for 10 seconds
 function snoozeSong(e) {
 	$("#musicPlayer").prop("muted",true);
-
+	ga("send", "event", "snooze", "click");
 	setTimeout(function() {
 		$("#musicPlayer").prop("muted",false);
 	},10000);
@@ -50,6 +50,7 @@ function snoozeSong(e) {
 //Sets off an alarm when 
 function checkAnswer(e) {
 	e.preventDefault();
+	ga("send", "event", "snooze", "click");
 	//Extracts the given answer
 	var answer = jQuery(this).attr('id');
 	 
@@ -69,7 +70,7 @@ function checkAnswer(e) {
 		$("#countTotal").text(count);
 		
 		//Load a new question
-		$.get('/json/puzzles',loadQuestion);
+		$.get('/json/puzzles/'+ $('#clockName').text(),loadQuestion);
 	} else {
 		$('#ans_output').text("WRONG");
 	}

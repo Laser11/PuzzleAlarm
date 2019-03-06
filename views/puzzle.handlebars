@@ -38,7 +38,7 @@
 
 </head>
 <body>
-	<audio id="musicPlayer"  loop>{{songPath}}</audio>
+	<audio id="musicPlayer"  loop>{{songPath}}</audio><span id="clockName" style="visibility: hidden;">{{name}}</span>
 	<!--iframe src="/music/{{songPath}}" allow="autoplay" style="display:none;"></iframe-->
 	<div class="container">
 		<div id="questionBox">
@@ -63,7 +63,7 @@
 			</div>
 			<h2 id="ans_output"></h2>
 			{{#if snoozeON}}
-			<div class="bigButton" id="snooze"><p class="addAlarmButtonText">Snooze</p></div>
+			<div class="bigButton" id="snooze"><p class="addAlarmButtonText">Mute 10 Seconds</p></div>
 			{{/if}}
 		</div>
 	</div>
