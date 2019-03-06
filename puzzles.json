@@ -37,7 +37,90 @@
    "d" : "132"
  },
  "solution" : "b"
+},
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "15 * 5",
+  "choice" : {
+   "a" : "65",
+   "b" : "30",
+   "c" : "75",
+   "d" : "92"
+ },
+ "solution" : "c"
+},
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "7 + 26",
+  "choice" : {
+   "a" : "33",
+   "b" : "31",
+   "c" : "34",
+   "d" : "39"
+ },
+ "solution" : "a"
+},
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "19 * 3",
+  "choice" : {
+   "a" : "56",
+   "b" : "49",
+   "c" : "48",
+   "d" : "57"
+ },
+ "solution" : "d"
+},
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "4 ^ 3",
+  "choice" : {
+   "a" : "16",
+   "b" : "84",
+   "c" : "64",
+   "d" : "68"
+ },
+ "solution" : "c"
 }
-
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "22 * 11",
+  "choice" : {
+   "a" : "252",
+   "b" : "242",
+   "c" : "244",
+   "d" : "212"
+ },
+ "solution" : "b"
+},
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "2 * 26",
+  "choice" : {
+   "a" : "52",
+   "b" : "28",
+   "c" : "24",
+   "d" : "32"
+ },
+ "solution" : "a"
+},
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "5!",
+  "choice" : {
+   "a" : "15",
+   "b" : "62",
+   "c" : "120",
+   "d" : "625"
+ },
+ "solution" : "c"
+},
 ]
 }
