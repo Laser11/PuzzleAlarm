@@ -1,14 +1,5 @@
 'use strict';
 
-var weekday = new Array(7);
-weekday[0] =  "Su";
-weekday[1] = "M";
-weekday[2] = "Tu";
-weekday[3] = "W";
-weekday[4] = "Th";
-weekday[5] = "F";
-weekday[6] = "Sa";
-
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 
@@ -77,7 +68,9 @@ function checkClock() {
 
 	var date = new Date();
 	var timearr = date.toLocaleTimeString().split(' ');
-	var today = date.getDay();
+	
+	var today = ('0' + (date.getMonth() + 1)).slice(-2) + '/' + ('0' + date.getDate()).slice(-2) + '/' + date.getFullYear(); 
+
 	var timearr2 = timearr[0].split(':');
 	var time = timearr2[0] + ":" + timearr2[1] + " " + timearr[1];
 	time = time.replace(/[^ -~]/g,'');
@@ -87,14 +80,14 @@ function checkClock() {
 		var clockName = jQuery(this).find(".nameText .theName").text();
 		var clockTime = jQuery(this).find(".timeText .timeSpan").text();
 		var isEnabled = !(jQuery(this).find(".switch input").prop('checked'));
-		var clockDays = jQuery(this).find(".daysText").text().split(' ');
+		var clockDay = jQuery(this).find(".daysText").text();
 		
 
 
-		var isDay = clockDays.some(function(elem) {
-			return elem == weekday[today];
-		});
+		//Checks day
+		var isDay = (today == clockDay);
 
+		//Checks clock
 		if (clockTime == time &&
 			isDay &&
 			isEnabled)

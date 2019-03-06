@@ -1,3 +1,7 @@
+#clkname,#clktime,#clkdate,#musChoice {
+  font-size:  1em;
+}
+
 #alarmsBox {
   height: 75%;
   overflow-y: scroll;
@@ -160,16 +164,11 @@
 }
 
 .daysText {
-  width: 27%;
-  padding-left: 10%; 
-  padding-top: 1%;
-  vertical-align: middle;
-  float: left;
-  height:70%;
-  left:10%;
-  font-size: 100%;
-  letter-spacing: 3px;
-
+    width: 50%;
+    font-size: 145%;
+    padding-top: 10px;
+    color: rgb(255,255,255);
+    letter-spacing: 3px;
 }
 
 .exitText {
@@ -234,14 +233,15 @@
 }
 
 .timeText {
-  padding-left: 5%; 
+  padding-left: 5%;
   vertical-align: middle;
-  width: 55%;
+  width: 45%;
   float: left;
-  height:70%;
-  left:10%;
+  height: 70%;
+  left: 10%;
   font-size: 145%;
   letter-spacing: 5px;
+  padding-top: 10px;
 }
 
 #fbBut{

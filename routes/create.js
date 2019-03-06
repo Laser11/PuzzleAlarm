@@ -26,29 +26,17 @@ exports.view = function(req, res){
   }
   songs[0].isChecked = "selected";
   var defaultClock = {
-        "name" : "Jane Doe",
+        "name" : "",
         "rawTime" : "00:00",
         "time" : "12:00 AM",
-        "date" : "1970-01-01",
+        "rawDate" : "2019-01-01",
+        "date" : "01/01/2019",
         "online" : true,
         "songID" : "0",
-        "singleUse" : "checked",
         
-        "week" : {
-            "monCheck" : "checked",
-            "tuesCheck" : "checked",
-            "wedCheck" : "checked",
-            "thursCheck" : "checked",
-            "friCheck" : "checked",
-            "satCheck" : "checked",
-            "sunCheck" : "checked",
-            "text" : "checked"
-        },
-
         "puzzles" : {
-            "triviaCheck" : "checked",
-            "mathCheck" : "checked",
-            "memoryCheck" : "checked"
+            "mathCheck" : "",
+            "memoryCheck" : ""
         },
 
         "difficulty" : {

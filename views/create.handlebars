@@ -25,8 +25,8 @@
 		<!--Input name and time-->
 		<br>Name: <input type="text" id="clkname" name="clkname" value="{{clocks.name}}">
 		<br>Time: <input type="time" id="clktime" name="clktime" value="{{clocks.rawTime}}">
-		
-		<!--Input day of week-->
+		<br>Date: <input type="date" id="clkdate" name="clkdate" value="{{clocks.rawDate}}">
+		<!--Input day of week
 		<div class="indentBlock">
 			<input type="checkbox" class="reqBox" name="monChoice" value="checked" {{clocks.week.monCheck}}>Mon
 			<input type="checkbox" class="reqBox" name="tueChoice" value="checked" {{clocks.week.tuesCheck}}>Tue
@@ -36,8 +36,8 @@
 			<input type="checkbox" class="reqBox" name="satChoice" value="checked" {{clocks.week.satCheck}}>Sat
 			<input type="checkbox" class="reqBox" name="sunChoice" value="checked" {{clocks.week.sunCheck}}>Sun
 		</div>
-		
-		Alarm Disabling Puzzles:
+		-->
+		<br>Alarm Disabling Puzzles:
 			<div class="indentBlock">
 				<!--<input type="checkbox" class="reqBox1" name="trivChoice" value="checked" {{clocks.puzzles.triviaCheck}}>Music
 			<br>-->
@@ -48,7 +48,7 @@
 
 		Alarm Sound:
 			<div class="indentBlock">
-				<select name="musChoice">
+				<select id="musChoice" name="musChoice">
 					{{#each songs}}
 					<option value="{{id}}" {{isChecked}}>{{name}}</option>
 					{{/each}}

@@ -4,24 +4,12 @@
         "name" : "Wilson",
         "rawTime" : "11:30",
         "time" : "11:30 AM",
-        "date" : "2012-08-01",
+        "rawDate" : "2019-03-14",
+        "date" : "03/14/2019",
         "online" : true,
-        "songID" : "0",
-        "singleUse" : "checked",
-        
-        "week" : {
-            "monCheck" : "checked",
-            "tuesCheck" : "",
-            "wedCheck" : "checked",
-            "thursCheck" : "",
-            "friCheck" : "",
-            "satCheck" : "checked",
-            "sunCheck" : "",
-            "text" : "M W Sa"
-        },
+        "song" : "0",
 
         "puzzles" : {
-            "triviaCheck" : "checked",
             "mathCheck" : "checked",
             "memoryCheck" : "checked"
         },

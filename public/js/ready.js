@@ -12,30 +12,27 @@ $(document).ready(function() {
  */
 function initializePage() {
 	isReady();
-	$('.reqBox').click(isReady);
 	$('.reqBox1').click(isReady);
-	$('#clkname').on('input',isReady)
-	$('#clktime').on('input',isReady)
+	$('#clkname').on('input',isReady);
+	$('#clktime').on('input',isReady);
+	$('#clkdate').on('input',isReady);
+	
 }
 
 //Check if requirements are met 
 function isReady() {
 	var stayDisabled = true;
-	var stayDisabled1 = true;
 	//Extracts and examines required checkboxes
-	$(".reqBox").each(function(index) {
+	$(".reqBox1").each(function(index) {
 		if (jQuery(this).is(':checked')) {
 			stayDisabled = false;
 		}
 	});
-	$(".reqBox1").each(function(index) {
-		if (jQuery(this).is(':checked')) {
-			stayDisabled1 = false;
-		}
-	});
 	
-	if(!stayDisabled && !stayDisabled1 && $('#clkname').val() != null && $('#clkname').val().trim() != ''
-		&& $('#clktime').val() != null && $('#clktime').val().trim() != '' ) {
+	if(!stayDisabled 
+		&& $('#clkname').val() != null && $('#clkname').val().trim() != ''
+		&& $('#clktime').val() != null && $('#clktime').val().trim() != ''
+		&& $('#clkdate').val() != null && $('#clkdate').val().trim() != '' ) {
 		$('#submitSave').css('background-color','rgb(50,50,50)')
 	}
 	else {

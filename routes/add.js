@@ -51,29 +51,26 @@ function to12(time24) {
 	return hr + ":" + min + suffix;
 }
 
+function toDate(dateRev) {
+	var datearr = dateRev.split("-",3);
+	var dateUS = datearr[1] + '/' + datearr[2] + '/' + datearr[0];
+	return dateUS;
+}
+
 exports.addClock = function(request, response) {    
 	//Map query onto the json object
 	var newdata = {
 		name : request.body.clkname,
 		rawTime : request.body.clktime,
 		time: to12(request.body.clktime),
-		date : request.body.date,
+		rawDate : request.body.clkdate,
+		date: toDate(request.body.clkdate),
 		song : request.body.musChoice,
 		online : true,
 
 
 		singleUse: request.body.ongoing,
 		
-		week : {
-            monCheck 	: request.body.monChoice,
-            tuesCheck 	: request.body.tueChoice,
-            wedCheck 	: request.body.wedChoice,
-            thursCheck 	: request.body.thuChoice,
-            friCheck 	: request.body.friChoice,
-            satCheck 	: request.body.satChoice,
-            sunCheck 	: request.body.sunChoice,
-            text : translateWeek(request)
-        },
 
         puzzles : {
             triviaCheck : request.body.trivChoice,
