@@ -1,0 +1,325 @@
+//PuzzleScreen
+
+
+#clkname,#clktime,#clkdate,#musChoice {
+  font-size:  1em;
+}
+
+#alarmsBox {
+  height: 75%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+
+#cancel {
+  
+  bottom: 0px;
+}
+
+#countBox {
+  height: 40px;
+  text-align: center;
+}
+
+#exit {
+  position: relative;
+  top:10;
+  vertical-align: middle;
+  padding: 10px;
+  font-size: 100%;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+
+  font-family: sans-serif;
+
+
+  background-color: rgb(10,10,10);
+}
+
+#help {
+
+  bottom:0;
+}
+
+#options {
+  max-height: 15%;
+  bottom: 15vw;
+}
+
+#questionBox {
+  height:100%;
+  background-color: (13,1,6);
+}
+
+#question {
+  background-color: (13,1,6);
+}
+
+#snooze {
+  background-color: rgb(101,126,212);
+  width: calc(100% - 12.25%);
+  right: initial;
+  bottom: 8px;
+
+}
+
+#sumbitSave {
+  background-color: rgb(54,38,167);
+  position: fixed;
+  bottom: 0%;
+}
+
+.addAlarmButtonText {
+  vertical-align: middle;
+  font-size: 150%;
+  letter-spacing: 5px;
+  color: rgb(251,251,255);
+
+}
+
+.practiceButtonText {
+  vertical-align: middle;
+  padding-top: 20px;
+  font-size: 150%;
+  letter-spacing: 5px;
+
+}
+
+.alarm {
+  width: 100%;
+  height: 20%;
+  float: left;
+  background-color: rgb(54,38,167);
+}
+
+.background {
+  background-color: (13,1,6);
+}
+
+.bigButton {
+  width: 10%;
+  padding-right: 8%;
+  height: 10%;
+  border-radius: 15px;
+  height: 76px;
+  position: fixed;
+  bottom: 0;
+  right: 1;
+
+
+}
+
+.buttonText {
+  vertical-align: middle;
+  padding-top: 5%;
+  font-size: 150%;
+  letter-spacing: 5px;
+  color: rgb(251,251,255);
+}
+
+.choice {
+  display: inline-block;
+  height:10%;
+  width:40%;
+  margin:4%;
+  background-color: rgb(150,150,150);
+}
+
+.choice {
+  background-color: rgb(54,38,167);
+}
+
+.choice .buttonText {
+  margin: 0px;
+}
+
+.count {
+  display: inline-block;
+  margin: 0px 5px;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(100,100,100);
+}
+@media screen and (max-width: 600px) {
+  .choice {
+    width: 100%;
+    margin: 3% 0;
+  }
+}
+
+.container {
+  background-color: (13,1,6);
+}
+
+.dateText {
+  float:right;
+  width:50%;
+  height:70%;
+  font-size: 100%;
+  letter-spacing: 5px;
+
+}
+
+div {
+  background-color: (13,1,6);
+}
+
+.indentBlock {
+  margin-left: 4%;
+  width:auto;
+}
+
+.on, .editLink {
+  background-color: rgb(30,30,30);
+  width:30%;
+  height:20%;
+  float: left;
+}
+
+
+.off {
+  background-color: rgb(40,40,40);
+  width:25%;
+  height:20%;
+  float: left;
+}
+
+.daysText {
+    width: 50%;
+    font-size: 145%;
+    padding-top: 10px;
+    color: rgb(255,255,255);
+    letter-spacing: 3px;
+}
+
+.exitText {
+  padding-right: 5%; 
+  padding-top: 0%;
+  width: 20px;
+  vertical-align: middle;
+  float: right;
+  font-size: 200%;
+  letter-spacing: 3px;
+  color: rgb(70,70,70);
+
+}
+
+.nameText {
+  padding-top: 2%;
+
+  float: left;
+  width:100%;
+  height:30%;
+  font-size: 100%;
+  letter-spacing: 5px;
+  overflow: visible;
+  text-align: center;
+
+}
+
+.sne {
+  height: 10%;
+  
+  width: 100%;
+  padding: 1% 0;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+  border-radius: 15px;
+}
+
+.sneSave {
+  height: 10%;
+  background-color: rgb(54,38,167);
+  width: 100%;
+  padding: 1% 0;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+  border-radius: 15px;
+  position: fixed;
+  bottom: 5;
+  right: 1;
+}
+
+.sneDel {
+  height: 10%;
+  background-color: rgb(255,51,31);
+  width: 100%;
+  padding: 1% 0;
+  font-size: 30px;
+  letter-spacing: 5px;
+  color: rgb(255,255,255);
+  border-radius: 15px;
+}
+
+.timeText {
+  padding-left: 5%;
+  vertical-align: middle;
+  width: 45%;
+  float: left;
+  height: 70%;
+  left: 10%;
+  font-size: 145%;
+  letter-spacing: 5px;
+  padding-top: 10px;
+}
+
+#fbBut{
+  position: absolute;
+  text-align: center;
+}
+
+p{
+  color: rgb(13,1,6);
+  font-family: sans-serif;
+  text-align: center;
+}
+
+span {
+  color: rgb(255,255,255);
+  font-family: sans-serif;
+}
+
+h2 {
+  top:50px;
+  color: rgb(255,255,255);
+  text-align: center;
+  font-family: sans-serif;
+  letter-spacing: 5px;
+}
+
+h4 {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+h3 {
+  left: 5px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+div {
+    font-family: sans-serif;
+    overflow: hidden;
+    width: 100%;
+}
+
+body {
+  background-color: rgb(251,251,255);
+}
+
+form {
+  font-size: 150%;
+  line-height: 150%;
+  letter-spacing: 2px;
+  color: rgb(5,5,5);
+
+  font-family: sans-serif; 
+}

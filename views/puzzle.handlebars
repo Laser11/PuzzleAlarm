@@ -36,13 +36,15 @@
 	ga('send', 'pageview');
 	</script>
 
+	<link rel="stylesheet" href="/css/puzzleScreen.css">
+
 </head>
 <body>
 	<audio id="musicPlayer"  loop>{{songPath}}</audio>
 	<!--iframe src="/music/{{songPath}}" allow="autoplay" style="display:none;"></iframe-->
 	<div class="container">
-		<div id="questionBox">
-			<span id="exit" onclick="exitPuzzle()" style="visibility:{{visible}}">EXIT</span>
+		<div id="questionBox" class="background">
+			<!--<span id="exit" onclick="exitPuzzle()" style="visibility:{{visible}}">EXIT</span>-->
 
 			<p id="question" class="buttonText"></p>
 			
