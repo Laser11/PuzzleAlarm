@@ -1,0 +1,95 @@
+{
+  "puzzles" : [
+    {
+      "id" : "",
+      "type" : "trivia",
+      "question" : "When is Christmas?",
+      "choice" : {
+       "a" : "Feb 11",
+       "b" : "Mar 25",
+       "c" : "Nov 13",
+       "d" : "Dec 25"
+     },
+     "solution" : "d"
+   },
+   {
+    "id" : "",
+    "type" : "trivia",
+    "question" : "Who is the first president?",
+    "choice" : {
+     "a" : "George Washington",
+     "b" : "Andrew Jackson",
+     "c" : "John Quincy Adams",
+     "d" : "Thomas Jefferson"
+   },
+   "solution" : "a"
+ },
+ {
+  "id" : "",
+  "type" : "trivia",
+  "question" : "Which of the four has the largest population?",
+  "choice" : {
+   "a" : "France",
+   "b" : "Germany",
+   "c" : "Indonesia",
+   "d" : "Russia"
+ },
+ "solution" : "c"
+},
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "13 * 17",
+  "choice" : {
+   "a" : "271",
+   "b" : "131",
+   "c" : "151",
+   "d" : "221"
+ },
+ "solution" : "d"
+},
+
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "9 * 14",
+  "choice" : {
+   "a" : "156",
+   "b" : "116",
+   "c" : "126",
+   "d" : "236"
+ },
+ "solution" : "c"
+},
+
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "8 * 23",
+  "choice" : {
+   "a" : "184",
+   "b" : "214",
+   "c" : "124",
+   "d" : "174"
+ },
+ "solution" : "a"
+},
+
+{
+  "id" : "",
+  "type" : "math",
+  "question" : "7 * 26",
+  "choice" : {
+   "a" : "252",
+   "b" : "182",
+   "c" : "122",
+   "d" : "132"
+ },
+ "solution" : "b"
+}
+
+
+
+
+]
+}

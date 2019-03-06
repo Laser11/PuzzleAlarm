@@ -23,6 +23,6 @@ exports.puzzleInfo = function(req, res) { 
 
 
   	var puzzle = data.puzzles[puzzleID - 1]; // of by one, our first project has index 0
-  	console.log(puzzle);
+  	console.log(puzzle.type);
   	res.json(puzzle);
   }
