@@ -9,8 +9,6 @@ exports.puzzleInfoRand = function(req, res) { 
 	puzzleID = Math.floor(Math.random() * data.puzzles.length);
 	puzzle = data.puzzles[puzzleID];
 
-  	
-
   	res.json(puzzle);
   }
   exports.puzzleInfo = function(req, res) { 
@@ -42,8 +40,5 @@ exports.puzzleInfoRand = function(req, res) { 
 		if (puzzle.type == "memory" && isMem) break;
 		if (puzzle.type == "math" && isMath) break;
 	}
-
-  	console.log("Puzzle used: ");
-  	console.log(puzzle);
   	res.json(puzzle);
   }

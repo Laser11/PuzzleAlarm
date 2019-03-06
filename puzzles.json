@@ -1,41 +1,5 @@
 {
   "puzzles" : [
-    {
-      "id" : "",
-      "type" : "memory",
-      "question" : "When is Christmas?",
-      "choice" : {
-       "a" : "Feb 11",
-       "b" : "Mar 25",
-       "c" : "Nov 13",
-       "d" : "Dec 25"
-     },
-     "solution" : "d"
-   },
-   {
-    "id" : "",
-    "type" : "memory",
-    "question" : "Who is the first president?",
-    "choice" : {
-     "a" : "George Washington",
-     "b" : "Andrew Jackson",
-     "c" : "John Quincy Adams",
-     "d" : "Thomas Jefferson"
-   },
-   "solution" : "a"
- },
- {
-  "id" : "",
-  "type" : "memory",
-  "question" : "Which has the most people?",
-  "choice" : {
-   "a" : "France",
-   "b" : "Germany",
-   "c" : "Indonesia",
-   "d" : "Russia"
- },
- "solution" : "c"
-},
 {
   "id" : "",
   "type" : "math",
@@ -47,19 +11,6 @@
    "d" : "221"
  },
  "solution" : "d"
-},
-
-{
-  "id" : "",
-  "type" : "math",
-  "question" : "9 * 14",
-  "choice" : {
-   "a" : "156",
-   "b" : "116",
-   "c" : "126",
-   "d" : "236"
- },
- "solution" : "c"
 },
 
 {
@@ -87,9 +38,6 @@
  },
  "solution" : "b"
 }
-
-
-
 
 ]
 }

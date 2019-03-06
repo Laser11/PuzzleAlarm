@@ -21,7 +21,7 @@ function initializePage() {
 	$(".choice").click(checkAnswer);
 	$("#snooze").click(snoozeSong);
 	//Get the first question
-	$.get('/json/puzzles/'+ $('#clockName').text(),loadQuestion);
+	$.get('/json/puzzles',loadQuestion);
 
 	//Set audio
 	var audio = $("#musicPlayer").get(0);
@@ -70,7 +70,7 @@ function checkAnswer(e) {
 		$("#countTotal").text(count);
 		
 		//Load a new question
-		$.get('/json/puzzles/'+ $('#clockName').text(),loadQuestion);
+		$.get('/json/puzzles'.text(),loadQuestion);
 	} else {
 		$('#ans_output').text("WRONG");
 	}

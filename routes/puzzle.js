@@ -25,7 +25,6 @@ function renderPuzzleFromClock(req,res,snoozeON) {
       clockName = name;
       clocks.alarms[i].online = false;
     }
-    
   }
 
   //Render the puzzle page
