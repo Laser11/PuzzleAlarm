@@ -42,7 +42,7 @@ function initializePage() {
 //Mutes the music for 10 seconds
 function snoozeSong(e) {
 	$("#musicPlayer").prop("muted",true);
-	//ga("send", "event", "snooze", "click");
+	ga("send", "event", "snooze", "click");
 	setTimeout(function() {
 		$("#musicPlayer").prop("muted",false);
 	},10000);
@@ -51,7 +51,7 @@ function snoozeSong(e) {
 //Sets off an alarm when 
 function checkAnswer(e) {
 	e.preventDefault();
-	//ga("send", "event", "snooze", "click");
+	ga("send", "event", "snooze", "click");
 	//Extracts the given answer
 	var answer = jQuery(this).attr('id');
 	 
