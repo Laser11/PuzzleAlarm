@@ -44,7 +44,7 @@
 	<!--iframe src="/music/{{songPath}}" allow="autoplay" style="display:none;"></iframe-->
 	<div class="container">
 		<div id="questionBox" class="background">
-			<!--<span id="exit" onclick="exitPuzzle()" style="visibility:{{visible}}">EXIT</span>-->
+			<span id="exit" onclick="exitPuzzle()" style="visibility:{{visible}}">EXIT</span>
 
 			<p id="question" class="buttonText"></p>
 			
@@ -63,7 +63,7 @@
 				<div id="count2" class="count"></div>
 				<div id="count3" class="count"></div>
 			</div>
-			<h2 id="ans_output"></h2>
+			<h2 id="ans_output" style="color:rgb(0,0,0)"></h2>
 			{{#if snoozeON}}
 			<div class="bigButton" id="snooze"><p class="addAlarmButtonText">Mute 10 Seconds</p></div>
 			{{/if}}

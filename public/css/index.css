@@ -14,25 +14,7 @@
   bottom: 0px;
 }
 
-#countBox {
-  height: 40px;
-  text-align: center;
-}
 
-#exit {
-  position: relative;
-  top:10;
-  vertical-align: middle;
-  padding: 10px;
-  font-size: 100%;
-  letter-spacing: 5px;
-  color: rgb(255,255,255);
-
-  font-family: sans-serif;
-
-
-  background-color: rgb(10,10,10);
-}
 
 #help {
 
@@ -42,18 +24,6 @@
 #options {
   max-height: 15%;
   bottom: 15vw;
-}
-
-#questionBox {
-  height:100%;
-  background-color: rgb(80,80,80);
-}
-
-#snooze {
-  background-color: rgb(10,10,10);
-  width: calc(100% - 16px);
-  right: initial;
-  bottom: 8px;
 }
 
 #sumbitSave {
@@ -106,32 +76,6 @@
   font-size: 150%;
   letter-spacing: 5px;
   color: rgb(251,251,255);
-}
-
-.choice {
-  display: inline-block;
-  height:10%;
-  width:40%;
-  margin:4%;
-  background-color: rgb(150,150,150);
-}
-
-.choice .buttonText {
-  margin: 0px;
-}
-
-.count {
-  display: inline-block;
-  margin: 0px 5px;
-  height: 40px;
-  width: 40px;
-  background-color: rgb(100,100,100);
-}
-@media screen and (max-width: 600px) {
-  .choice {
-    width: 100%;
-    margin: 3% 0;
-  }
 }
 
 .dateText {

@@ -53,15 +53,16 @@
 }
 
 #question {
-  background-color: (13,1,6);
+  background-color: rgb(13,1,6);
+  padding: 2% 0;
 }
 
 #snooze {
   background-color: rgb(101,126,212);
-  width: calc(100% - 12.25%);
+  width: calc(100% - 16px);
   right: initial;
   bottom: 8px;
-
+  padding-right: 0;
 }
 
 #sumbitSave {
@@ -122,7 +123,7 @@
   display: inline-block;
   height:10%;
   width:40%;
-  margin:4%;
+  margin: 20px 4%;
   background-color: rgb(150,150,150);
 }
 
@@ -144,7 +145,13 @@
 @media screen and (max-width: 600px) {
   .choice {
     width: 100%;
-    margin: 3% 0;
+    margin: 6px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .choice .buttonText {
+    padding-top: 2%;
   }
 }
 
