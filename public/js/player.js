@@ -2,6 +2,7 @@
 
 var solution = "";
 var count = 0;
+var puzzlesUsed = [-1];
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -78,6 +79,18 @@ function checkAnswer(e) {
 
 //Used to fill space
 function loadQuestion(result) {
+	var puzzleId = result['id'];
+	//Stops if the question was already used
+	if (puzzlesUsed.includes(puzzleId)) {
+		//Load a new question
+		$.get('/json/puzzles',loadQuestion);
+		return;
+	}
+	else{
+		puzzlesUsed.push(puzzleId);
+	}
+
+
 	var htmlData = result['question'];
 
 	solution = result['solution'];

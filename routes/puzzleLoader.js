@@ -9,6 +9,9 @@ exports.puzzleInfoRand = function(req, res) { 
 	puzzleID = Math.floor(Math.random() * data.puzzles.length);
 	puzzle = data.puzzles[puzzleID];
 
+	//Dynamically name the id of the puzzle
+	puzzle.id = puzzleID;
+
   	res.json(puzzle);
   }
   exports.puzzleInfo = function(req, res) { 
@@ -33,12 +36,15 @@ exports.puzzleInfoRand = function(req, res) { 
 	var puzzleID;
 	var puzzle;
 
-	//Look for puzzles
+	//Look for puzzles matching the category, with a hard limit of 1000 random searches
 	for (var i = 0; i < 1000; i++) {
 		puzzleID = Math.floor(Math.random() * data.puzzles.length);
 		puzzle = data.puzzles[puzzleID]; // of by one, our first project has index 0
 		if (puzzle.type == "memory" && isMem) break;
 		if (puzzle.type == "math" && isMath) break;
 	}
+
+	//Dynamically name the id of the puzzle
+	puzzle.id = puzzleID;
   	res.json(puzzle);
   }
