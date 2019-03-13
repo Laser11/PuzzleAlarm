@@ -41,6 +41,7 @@
 
 </head>
 <body>
+	<input id="musicButton" type="button" style="display: none;" onclick="document.getElementById('musicPlayer').play()">
 	<audio id="musicPlayer"  loop>{{songPath}}</audio><span id="clockName" style="visibility: hidden;">{{name}}</span>
 	<!--iframe src="/music/{{songPath}}" allow="autoplay" style="display:none;"></iframe-->
 	<div class="container">
