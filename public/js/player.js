@@ -31,11 +31,9 @@ function initializePage() {
 
 	audio.load();
 
-	document.getElementById("musicButton").click()
-
-//	audio.play().catch(function() {
+	audio.play().catch(function() {
 		
-//	});
+	});
 
 
 
