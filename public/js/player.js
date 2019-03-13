@@ -65,7 +65,7 @@ function checkAnswer(e) {
 		//Set the volume of the music
 		$('#musicPlayer').prop('volume',1/(Math.pow(10,count)));
 
-		console.log($('#musicPlayer').prop('volume'));
+		console.log("Volume:" + $('#musicPlayer').prop('volume'));
 
 		//change the colors
 		var i;
@@ -88,7 +88,7 @@ function loadQuestion(result) {
 	//Stops if the question was already used
 	if (puzzlesUsed.includes(puzzleId)) {
 		//Load a new question
-		$.get('/json/puzzles',loadQuestion);
+		$.get('/json/puzzles/' + $('#clockName').text(),loadQuestion);
 		return;
 	}
 	else{

@@ -159,14 +159,14 @@
 {
   "id" : "",
   "type" : "trivia",
-  "question" : "?",
+  "question" : "What is Sir Lancelot's favorite color?",
   "choice" : {
    "a" : "African or European?",
    "b" : "11 m/s",
    "c" : "Blue",
    "d" : "I don't know"
  },
- "solution" : "b"
+ "solution" : "c"
 },
 
 {

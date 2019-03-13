@@ -35,15 +35,23 @@ exports.puzzleInfoRand = function(req, res) { 
 	isMem  = (using.puzzles.memoryCheck == "checked");
 	var puzzleID;
 	var puzzle;
-
+	console.log("Include math:");
+	console.log(isMath);
+	console.log("Include trivia:");
+	console.log(isMem);
 	//Look for puzzles matching the category, with a hard limit of 1000 random searches
 	for (var i = 0; i < 1000; i++) {
 		puzzleID = Math.floor(Math.random() * data.puzzles.length);
 		puzzle = data.puzzles[puzzleID]; // of by one, our first project has index 0
-		if (puzzle.type == "memory" && isMem) break;
-		if (puzzle.type == "math" && isMath) break;
+		if (puzzle.type == "trivia" && isMem) {
+			console.log("Returning trivia puzzle");
+			break;
+		}
+		if (puzzle.type == "math" && isMath) {
+			console.log("Returning math puzzle");
+			break;
+		}
 	}
-
 	//Dynamically name the id of the puzzle
 	puzzle.id = puzzleID;
   	res.json(puzzle);
