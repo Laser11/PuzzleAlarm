@@ -1,5 +1,174 @@
 {
   "puzzles" : [
+    {
+      "id" : "",
+      "type" : "trivia",
+      "question" : "When is Christmas?",
+      "choice" : {
+       "a" : "Feb 11",
+       "b" : "Mar 25",
+       "c" : "Nov 13",
+       "d" : "Dec 25"
+     },
+     "solution" : "d"
+   },
+   {
+      "id" : "",
+      "type" : "trivia",
+      "question" : "Which is the furthest planet from our Sun?",
+      "choice" : {
+       "a" : "Ceres",
+       "b" : "Pluto",
+       "c" : "Uranus",
+       "d" : "Neptune"
+     },
+     "solution" : "d"
+   },
+   {
+      "id" : "",
+      "type" : "trivia",
+      "question" : "When is Leap Day?",
+      "choice" : {
+       "a" : "Feb 27",
+       "b" : "Feb 28",
+       "c" : "Feb 29",
+       "d" : "Feb 30"
+     },
+     "solution" : "c"
+   },
+   {
+      "id" : "",
+      "type" : "trivia",
+      "question" : "Which country has the most area?",
+      "choice" : {
+       "a" : "Canada",
+       "b" : "Australia",
+       "c" : "China",
+       "d" : "Brazil"
+     },
+     "solution" : "a"
+   },
+   {
+    "id" : "",
+    "type" : "trivia",
+    "question" : "Who is the first president?",
+    "choice" : {
+     "a" : "George Washington",
+     "b" : "Andrew Jackson",
+     "c" : "John Quincy Adams",
+     "d" : "Thomas Jefferson"
+   },
+   "solution" : "a"
+ },
+ {
+    "id" : "",
+    "type" : "trivia",
+    "question" : "Who was the second president assasinated?",
+    "choice" : {
+     "a" : "Theodore Roosevelt",
+     "b" : "John F. Kennedy",
+     "c" : "William McKinley",
+     "d" : "James A. Garfield"
+   },
+   "solution" : "a"
+ },
+ {
+  "id" : "",
+  "type" : "trivia",
+  "question" : "Which of the four has the largest population?",
+  "choice" : {
+   "a" : "France",
+   "b" : "Germany",
+   "c" : "Indonesia",
+   "d" : "Russia"
+ },
+ "solution" : "c"
+},
+{
+  "id" : "",
+  "type" : "trivia",
+  "question" : "Which color has the shortest wavelength?",
+  "choice" : {
+   "a" : "Cyan",
+   "b" : "Blue",
+   "c" : "Yellow",
+   "d" : "Green"
+ },
+ "solution" : "b"
+},
+{
+  "id" : "",
+  "type" : "trivia",
+  "question" : "Which color has the lowest frequency?",
+  "choice" : {
+   "a" : "Cyan",
+   "b" : "Blue",
+   "c" : "Yellow",
+   "d" : "Green"
+ },
+ "solution" : "c"
+},
+{
+  "id" : "",
+  "type" : "trivia",
+  "question" : "Which of these is a secondary color?",
+  "choice" : {
+   "a" : "Red",
+   "b" : "Blue",
+   "c" : "Yellow",
+   "d" : "Green"
+ },
+ "solution" : "c"
+},
+{
+  "id" : "",
+  "type" : "trivia",
+  "question" : "Which DC hero is based out of Central City?",
+  "choice" : {
+   "a" : "Cyborg",
+   "b" : "Superman",
+   "c" : "Green Lantern",
+   "d" : "Flash"
+ },
+ "solution" : "d"
+},
+{
+  "id" : "",
+  "type" : "trivia",
+  "question" : "What is the air speed velocity of an unladen swallow?",
+  "choice" : {
+   "a" : "African or European?",
+   "b" : "11 m/s",
+   "c" : "Blue",
+   "d" : "I don't know"
+ },
+ "solution" : "a"
+},
+{
+  "id" : "",
+  "type" : "trivia",
+  "question" : "What is the air speed velocity of an unladen EUROPEAN swallow?",
+  "choice" : {
+   "a" : "African or European?",
+   "b" : "11 m/s",
+   "c" : "Blue",
+   "d" : "I don't know"
+ },
+ "solution" : "b"
+},
+{
+  "id" : "",
+  "type" : "trivia",
+  "question" : "?",
+  "choice" : {
+   "a" : "African or European?",
+   "b" : "11 m/s",
+   "c" : "Blue",
+   "d" : "I don't know"
+ },
+ "solution" : "b"
+},
+
 {
   "id" : "",
   "type" : "math",
