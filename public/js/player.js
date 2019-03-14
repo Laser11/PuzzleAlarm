@@ -3,6 +3,37 @@
 var solution = "";
 var count = 0;
 var puzzlesUsed = [-1];
+var resultCache;
+var orderChoices = [
+['a','b','c','d'],
+['a','b','d','c'],
+['a','c','b','d'],
+['a','c','d','b'],
+['a','d','c','b'],
+['a','d','b','c'],
+
+['b','a','c','d'],
+['b','a','d','c'],
+['b','c','a','d'],
+['b','c','d','a'],
+['b','d','c','a'],
+['b','d','a','c'],
+
+['c','b','a','d'],
+['c','b','d','a'],
+['c','a','b','d'],
+['c','a','d','b'],
+['c','d','a','b'],
+['c','d','b','a'],
+
+['d','a','c','b'],
+['d','a','b','c'],
+['d','c','a','b'],
+['d','c','b','a'],
+['d','b','c','a'],
+['d','b','a','c']
+];
+
 
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
@@ -78,12 +109,16 @@ function checkAnswer(e) {
 		//Load a new question
 		$.get('/json/puzzles/' + $('#clockName').text(),loadQuestion);
 	} else {
+		//Reshuffle answers on wrong choice
+		shuffleChoices();
 		$('#ans_output').text("WRONG");
 	}
 }
 
 //Used to fill space
 function loadQuestion(result) {
+	//Cache the result for when reshuffling the answers
+	resultCache = result;
 	var puzzleId = result['id'];
 	//Stops if the question was already used
 	if (puzzlesUsed.includes(puzzleId)) {
@@ -95,16 +130,35 @@ function loadQuestion(result) {
 		puzzlesUsed.push(puzzleId);
 	}
 
-
+	//Get question
 	var htmlData = result['question'];
-
+	//Get solution
 	solution = result['solution'];
 
+	//Assign questions and answers
 	$('#question').html(htmlData);
-	$('#a p').text(result.choice.a);
-	$('#b p').text(result.choice.b);
-	$('#c p').text(result.choice.c);
-	$('#d p').text(result.choice.d);
+	shuffleChoices();
 }
 
 	
+function shuffleChoices() {
+	var choiceID = Math.floor(Math.random() * orderChoices.length);
+	var orderChoice = orderChoices[choiceID];
+
+	//Clar and eassign id
+	$('.a').attr('id','');
+	$('.b').attr('id','');
+	$('.c').attr('id','');
+	$('.d').attr('id','');
+
+	$('.a').attr('id',orderChoice[0]);
+	$('.b').attr('id',orderChoice[1]);
+	$('.c').attr('id',orderChoice[2]);
+	$('.d').attr('id',orderChoice[3]);
+
+	//Reassign answers
+	$('#a p').text(resultCache.choice.a);
+	$('#b p').text(resultCache.choice.b);
+	$('#c p').text(resultCache.choice.c);
+	$('#d p').text(resultCache.choice.d);
+}
