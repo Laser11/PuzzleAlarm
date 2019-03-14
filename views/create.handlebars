@@ -23,8 +23,12 @@
 		
 
 		<!--Input name and time-->
-		<br>
-		<br>Name: <input type="text" id="clkname" name="clkname" value="{{clocks.name}}">
+		<br><br>Name:
+		{{#if editing}}
+			<input style="background-color: #CCCCCC;" type="text" id="clkname" name="clkname" value="{{clocks.name}}" readonly>
+		{{else}}
+			<input type="text" id="clkname" name="clkname" value="{{clocks.name}}">
+		{{/if}}
 		<br>Time: <input type="time" id="clktime" name="clktime" value="{{clocks.rawTime}}">
 		<br>Date: <input type="date" id="clkdate" name="clkdate" value="{{clocks.rawDate}}">
 		<!--Input day of week
